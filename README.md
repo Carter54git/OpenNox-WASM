@@ -10,13 +10,6 @@
 
 This project features a restored and adapted version of the legendary game Nox, running directly in your web browser. All game features are preserved and working correctly.
 
-## 🚀 Quick Start
-
-1. **Download** the latest version of the project
-2. **Extract** files to your desired directory
-3. **Open** `index.html` in your browser
-4. **Enjoy** the game!
-
 ## 🇷🇺 Russian Localization
 
 To add Russian language support to the game:
