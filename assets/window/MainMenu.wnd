@@ -1,0 +1,95 @@
+ENABLEDCOLOR = TRANSPARENT;
+HILITECOLOR = 192 128 128;
+DISABLEDCOLOR = TRANSPARENT;
+SELECTEDCOLOR = TRANSPARENT;
+TEXTCOLOR = 240 180 42;
+BACKGROUNDCOLOR = TRANSPARENT;
+
+
+WINDOW
+  100 0 0 640 480 USER;
+  STATUS = ENABLED+NOFOCUS;
+
+  CHILD
+    WINDOW
+      110 0 0 640 270 USER;
+      STATUS = ENABLED+NOFOCUS;
+      
+      CHILD
+        WINDOW
+          111 157 91 166 35 PUSHBUTTON;
+          STATUS = ENABLED+IMAGE+SMOOTH_TEXT+NOFOCUS;
+          STYLE = MOUSETRACK;
+          IMAGEOFFSET = -177 -121;
+          HILITEIMAGE = Button1Lit;
+          SELECTEDIMAGE = Button1Lit;
+          BACKGROUNDIMAGE = Button1Unlit;
+          ENABLEDIMAGE = NULL;
+          DISABLEDIMAGE = Button1Unlit;
+          TEXT = MainMenu.wnd:Solo;
+        END
+
+        WINDOW
+          112 197 151 166 35 PUSHBUTTON;
+          STATUS = ENABLED+IMAGE+SMOOTH_TEXT+NOFOCUS;
+          STYLE = MOUSETRACK;
+          IMAGEOFFSET = -217 -181;
+          HILITEIMAGE = Button2Lit;
+          SELECTEDIMAGE = Button2Lit;
+          BACKGROUNDIMAGE = Button2Unlit;
+          ENABLEDIMAGE = NULL;
+          DISABLEDIMAGE = Button2Unlit;
+          TEXT = MainMenu.wnd:Multiplay;
+        END
+
+				WINDOW
+          131 237 210 166 35 PUSHBUTTON;
+          STATUS = ENABLED+IMAGE+SMOOTH_TEXT+NOFOCUS;
+          STYLE = MOUSETRACK;
+          IMAGEOFFSET = -237 -210;
+          HILITEIMAGE = ButtonQuestLit;
+          SELECTEDIMAGE = ButtonQuestLit;
+          BACKGROUNDIMAGE = ButtonQuestUnlit;
+          ENABLEDIMAGE = NULL;
+          DISABLEDIMAGE = ButtonQuestUnlit;
+          TEXT = GeneralPrint:SoloQuest;
+				END
+
+      END
+    END
+
+    WINDOW
+      120 0 270 640 240 USER;
+      STATUS = ENABLED+NOFOCUS;
+      
+      CHILD
+        WINDOW
+          121 277 1 166 35 PUSHBUTTON;
+          STATUS = ENABLED+IMAGE+SMOOTH_TEXT+NOFOCUS;
+          STYLE = MOUSETRACK;
+          IMAGEOFFSET = -257 -241;
+          HILITEIMAGE = Button3Lit;
+          SELECTEDIMAGE = Button3Lit;
+          BACKGROUNDIMAGE = Button3Unlit;
+          ENABLEDIMAGE = NULL;
+          DISABLEDIMAGE = Button3Unlit;
+          TEXT = MainMenu.wnd:PlayIntro;
+        END
+
+        WINDOW
+          122 317 61 166 35 PUSHBUTTON;
+          STATUS = ENABLED+IMAGE+SMOOTH_TEXT+NOFOCUS;
+          STYLE = MOUSETRACK;
+          IMAGEOFFSET = -297 -301;
+          HILITEIMAGE = Button4Lit;
+          SELECTEDIMAGE = Button4Lit;
+          BACKGROUNDIMAGE = Button4Unlit;
+          ENABLEDIMAGE = NULL;
+          DISABLEDIMAGE = Button4Unlit;
+          TEXT = MainMenu.wnd:Credits;
+        END
+      END
+    END
+  END
+END
+

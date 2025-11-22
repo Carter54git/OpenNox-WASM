@@ -1,0 +1,433 @@
+ENABLEDCOLOR = TRANSPARENT;
+HILITECOLOR = TRANSPARENT;
+DISABLEDCOLOR = TRANSPARENT;
+SELECTEDCOLOR = TRANSPARENT;
+TEXTCOLOR = 240 180 42;
+BACKGROUNDCOLOR = TRANSPARENT;
+
+
+WINDOW
+  700 0 0 640 480 USER;
+  STATUS = ENABLED+IMAGE+NOFOCUS;
+  BACKGROUNDIMAGE = ColorSelectionBG;
+
+  CHILD
+    WINDOW
+      751 130 264 204 20 ENTRYFIELD (Name Field);
+      STATUS = ENABLED+SMOOTH_TEXT+ONE_LINE;
+      STYLE = MOUSETRACK;
+      DATA = 25 204 0 3;
+    END
+
+    WINDOW
+      750 130 247 204 17 STATICTEXT;
+      STATUS = SMOOTH_TEXT+NOFOCUS;
+      DATA = 1 0 SelColor.wnd:EnterName;
+    END
+
+    WINDOW
+      710 397 34 124 17 STATICTEXT;
+      STATUS = SMOOTH_TEXT+NOFOCUS;
+      DATA = 1 0 SelColor.wnd:Skin;
+    END
+
+    WINDOW
+      711 397 81 124 17 STATICTEXT;
+      STATUS = ENABLED+IMAGE+SMOOTH_TEXT+NOFOCUS;
+      IMAGEOFFSET = -397 -81;
+      HILITEIMAGE = NULL;
+      SELECTEDIMAGE = NULL;
+      BACKGROUNDIMAGE = NULL;
+      ENABLEDIMAGE = ColorHairButtonLit;
+      DISABLEDIMAGE = NULL;
+      DATA = 1 0 SelColor.wnd:Hair;
+    END
+
+    WINDOW
+      712 397 128 124 17 STATICTEXT;
+      STATUS = IMAGE+SMOOTH_TEXT+NOFOCUS;
+      IMAGEOFFSET = -397 -128;
+      HILITEIMAGE = NULL;
+      SELECTEDIMAGE = NULL;
+      BACKGROUNDIMAGE = NULL;
+      ENABLEDIMAGE = ColorMustacheButtonLit;
+      DISABLEDIMAGE = NULL;
+      DATA = 1 0 SelColor.wnd:Mustache;
+    END
+
+    WINDOW
+      713 397 175 124 17 STATICTEXT;
+      STATUS = IMAGE+SMOOTH_TEXT+NOFOCUS;
+      IMAGEOFFSET = -397 -175;
+      HILITEIMAGE = NULL;
+      SELECTEDIMAGE = NULL;
+      BACKGROUNDIMAGE = NULL;
+      ENABLEDIMAGE = ColorGoateeButtonLit;
+      DISABLEDIMAGE = NULL;
+      DATA = 1 0 SelColor.wnd:Goatee;
+    END
+
+    WINDOW
+      714 397 222 124 17 STATICTEXT;
+      STATUS = IMAGE+SMOOTH_TEXT+NOFOCUS;
+      IMAGEOFFSET = -397 -222;
+      HILITEIMAGE = NULL;
+      SELECTEDIMAGE = NULL;
+      BACKGROUNDIMAGE = NULL;
+      ENABLEDIMAGE = ColorBeardButtonLit;
+      DISABLEDIMAGE = NULL;
+      DATA = 1 0 SelColor.wnd:Beard;
+    END
+
+    WINDOW
+      715 397 269 124 17 STATICTEXT;
+      STATUS = SMOOTH_TEXT+NOFOCUS;
+      DATA = 1 0 SelColor.wnd:Pants;
+    END
+
+    WINDOW
+      716 397 315 124 17 STATICTEXT;
+      STATUS = SMOOTH_TEXT+NOFOCUS;
+      DATA = 1 0 SelColor.wnd:Shirt;
+    END
+
+    WINDOW
+      717 397 361 124 17 STATICTEXT;
+      STATUS = SMOOTH_TEXT+NOFOCUS;
+      DATA = 1 0 SelColor.wnd:Shoes;
+    END
+
+
+    WINDOW
+      720 532 34 29 14 PUSHBUTTON (Skin Color Bead);
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+    END
+
+    WINDOW
+      721 532 81 29 14 PUSHBUTTON (Hair Color Bead);
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+    END
+
+    WINDOW
+      722 532 129 29 14 PUSHBUTTON (Mustache Color Bead);
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+    END
+
+    WINDOW
+      723 532 176 29 14 PUSHBUTTON (Goatee Color Bead);
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+    END
+
+    WINDOW
+      724 532 224 29 14 PUSHBUTTON (Beard Color Bead);
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+    END
+
+    WINDOW
+      725 532 271 29 14 PUSHBUTTON (Pants Color Bead);
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+    END
+
+    WINDOW
+      726 532 318 14 14 PUSHBUTTON (Shirt Color Bead 1);
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+    END
+
+    WINDOW
+      727 548 318 13 14 PUSHBUTTON (Shirt Color Bead 2);
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+    END
+
+    WINDOW
+      728 532 364 14 14 PUSHBUTTON (Shoes Color Bead 1);
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+    END
+
+    WINDOW
+      729 548 364 13 14 PUSHBUTTON (Shoes Color Bead 2);
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+    END
+
+
+    WINDOW
+      731 367 79 20 20 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      IMAGEOFFSET = -367 -79;
+      HILITEIMAGE = NULL;
+      SELECTEDIMAGE = NULL;
+      BACKGROUNDIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+    END
+
+    WINDOW
+      732 367 126 20 20 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      IMAGEOFFSET = -367 -126;
+      HILITEIMAGE = NULL;
+      SELECTEDIMAGE = NULL;
+      BACKGROUNDIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+    END
+
+    WINDOW
+      733 367 173 20 20 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      IMAGEOFFSET = -367 -173;
+      HILITEIMAGE = NULL;
+      SELECTEDIMAGE = NULL;
+      BACKGROUNDIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+    END
+
+    WINDOW
+      734 367 220 20 20 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      IMAGEOFFSET = -367 -220;
+      HILITEIMAGE = NULL;
+      SELECTEDIMAGE = NULL;
+      BACKGROUNDIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+    END
+
+
+    WINDOW
+      740 132 36 200 200 USER (Paper Doll Region);
+	  STATUS = NOFOCUS;
+    END
+
+
+    WINDOW
+      799 179 369 103 20 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE+SMOOTH_TEXT+NOFOCUS;
+      STYLE = MOUSETRACK;
+      IMAGEOFFSET = -179 -369;
+      HILITEIMAGE = ColorAcceptButtonLit;
+      SELECTEDIMAGE = ColorAcceptButtonLit;
+      BACKGROUNDIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+      TEXT = SelColor.wnd:Accept;
+    END
+
+    CHILD
+      WINDOW
+        760 0 0 175 74 USER;
+        STATUS = ENABLED+IMAGE+HIDDEN+NOFOCUS;
+        BACKGROUNDIMAGE = ColorSelectorBG;
+
+        CHILD
+          WINDOW
+            761 11 10 13 8 PUSHBUTTON (Color Bead 1);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            762 31 10 13 8 PUSHBUTTON (Color Bead 2);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            763 51 10 13 8 PUSHBUTTON (Color Bead 3);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            764 71 10 13 8 PUSHBUTTON (Color Bead 4);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            765 91 10 13 8 PUSHBUTTON (Color Bead 5);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            766 111 10 13 8 PUSHBUTTON (Color Bead 6);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            767 131 10 13 8 PUSHBUTTON (Color Bead 7);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            768 151 10 13 8 PUSHBUTTON (Color Bead 8);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            769 11 25 13 8 PUSHBUTTON (Color Bead 9);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            770 31 25 13 8 PUSHBUTTON (Color Bead 10);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            771 51 25 13 8 PUSHBUTTON (Color Bead 11);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            772 71 25 13 8 PUSHBUTTON (Color Bead 12);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            773 91 25 13 8 PUSHBUTTON (Color Bead 13);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            774 111 25 13 8 PUSHBUTTON (Color Bead 14);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            775 131 25 13 8 PUSHBUTTON (Color Bead 15);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            776 151 25 13 8 PUSHBUTTON (Color Bead 16);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            777 11 40 13 8 PUSHBUTTON (Color Bead 17);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            778 31 40 13 8 PUSHBUTTON (Color Bead 18);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            779 51 40 13 8 PUSHBUTTON (Color Bead 19);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            780 71 40 13 8 PUSHBUTTON (Color Bead 20);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            781 91 40 13 8 PUSHBUTTON (Color Bead 21);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            782 111 40 13 8 PUSHBUTTON (Color Bead 22);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            783 131 40 13 8 PUSHBUTTON (Color Bead 23);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            784 151 40 13 8 PUSHBUTTON (Color Bead 24);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            785 11 55 13 8 PUSHBUTTON (Color Bead 25);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            786 31 55 13 8 PUSHBUTTON (Color Bead 26);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            787 51 55 13 8 PUSHBUTTON (Color Bead 27);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            788 71 55 13 8 PUSHBUTTON (Color Bead 28);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            789 91 55 13 8 PUSHBUTTON (Color Bead 29);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            790 111 55 13 8 PUSHBUTTON (Color Bead 30);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            791 131 55 13 8 PUSHBUTTON (Color Bead 31);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+
+          WINDOW
+            792 151 55 13 8 PUSHBUTTON (Color Bead 32);
+            STATUS = ENABLED+NOFOCUS;
+            STYLE = MOUSETRACK;
+          END
+        END
+      END
+    END
+  END
+END
+

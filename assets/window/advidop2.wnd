@@ -1,0 +1,121 @@
+ENABLEDCOLOR = 255 0 0;
+DISABLEDCOLOR = 128 128 128;
+HILITECOLOR = 255 192 192;
+SELECTEDCOLOR = 255 128 128;
+TEXTCOLOR = 255 0 0;
+BACKGROUNDCOLOR = 0 0 0;
+
+WINDOW
+  2000 0 0 125 205 USER;
+  STATUS = ENABLED+ABOVE+NOFOCUS;
+
+  CHILD
+    WINDOW
+      2001 0 192 125 13 PUSHBUTTON;
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+      TEXT = WindowDir:Back;
+    END
+
+    WINDOW
+      2010 0 0 125 11 CHECKBOX;
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+      TEXT = AdVidOpt.wnd:ClipWalls;
+    END
+
+    WINDOW
+      2011 0 12 125 11 CHECKBOX;
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+      TEXT = AdVidOpt.wnd:MMXEnabled;
+    END
+
+    WINDOW
+      2012 0 24 125 11 CHECKBOX;
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+      TEXT = AdVidOpt.wnd:GouradShading;
+    END
+
+    WINDOW
+      2013 0 36 125 11 CHECKBOX;
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+      TEXT = AdVidOpt.wnd:TranslucentObjects;
+    END
+
+    WINDOW
+      2014 0 48 125 11 CHECKBOX;
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+      TEXT = AdVidOpt.wnd:TranslucentConsole;
+    END
+
+    WINDOW
+      2015 0 60 125 11 CHECKBOX;
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+      TEXT = AdVidOpt.wnd:RenderGlow;
+    END
+
+	WINDOW
+      2016 0 72 125 11 CHECKBOX;
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+      TEXT = AdVidOpt.wnd:RenderGUI;
+    END
+
+	WINDOW
+      2017 0 84 125 11 CHECKBOX;
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+      TEXT = AdVidOpt.wnd:FadeObjects;
+    END
+
+
+    WINDOW
+      2020 0 96 125 11 CHECKBOX;
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+      TEXT = AdVidOpt.wnd:DrawFrontWalls;
+    END
+
+    WINDOW
+      2021 0 108 125 11 CHECKBOX;
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+      TEXT = AdVidOpt.wnd:TranslucentFrontWalls;
+    END
+
+    WINDOW
+      2022 0 120 125 11 CHECKBOX;
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+      TEXT = AdVidOpt.wnd:InterlacedFrontWalls;
+    END
+
+
+    WINDOW
+      2030 0 132 125 11 CHECKBOX;
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+      TEXT = AdVidOpt.wnd:AnimatedFloors;
+    END
+
+    WINDOW
+      2031 0 144 125 11 CHECKBOX;
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+      TEXT = AdVidOpt.wnd:InterlacedFloors;
+    END
+
+    WINDOW
+      2032 0 156 125 11 CHECKBOX;
+      STATUS = ENABLED+NOFOCUS;
+      STYLE = MOUSETRACK;
+      TEXT = AdVidOpt.wnd:FlatShadedFloors;
+    END
+
+  END
+END

@@ -1,0 +1,86 @@
+ENABLEDCOLOR = 255 0 0;
+HILITECOLOR = 255 192 192;
+DISABLEDCOLOR = 128 128 128;
+SELECTEDCOLOR = 255 128 128;
+TEXTCOLOR = 255 0 0;
+BACKGROUNDCOLOR = 0 0 0;
+
+WINDOW
+  1200 0 0 640 200 USER;
+  STATUS = ENABLED;
+
+  CHILD
+    WINDOW
+  	  1214 510 145 120 15 ENTRYFIELD (Team Name);
+	  STATUS = ENABLED;
+	  TEXT = Playrlst.wnd:Team;
+	  DATA = 32;
+	END
+
+    WINDOW
+      1215 510 165 55 20 PUSHBUTTON (Join team);
+      STATUS = ENABLED;
+	  STYLE = MOUSETRACK;
+	  TEXT = Playrlst.wnd:Join;
+	END
+
+    WINDOW
+      1216 575 165 55 20 PUSHBUTTON (Create team);
+      STATUS = ENABLED;
+	  STYLE = MOUSETRACK;
+	  TEXT = Playrlst.wnd:Create;
+	END
+
+    WINDOW
+  	  1220 10 10 260 155 SCROLLLISTBOX (Ban List);
+	  STATUS = ENABLED;
+      TEXTCOLOR = 255 255 255;
+	  TEXT = Playrlst.wnd:BanAllow;
+	  DATA = 16 10 0 0 0 0 0;
+	END
+
+    WINDOW
+      1221 270 20 10 15 PUSHBUTTON;
+      STATUS = ENABLED;
+	  STYLE = MOUSETRACK;
+	  TEXT = WindowDir:Up;
+	END
+
+    WINDOW
+      1222 270 35 10 15 PUSHBUTTON;
+      STATUS = ENABLED;
+	  STYLE = MOUSETRACK;
+	  TEXT = WindowDir:Down;
+	END
+
+    WINDOW
+      1226 10 165 260 20 PUSHBUTTON (Remove button);
+      STATUS = ENABLED;
+	  STYLE = MOUSETRACK;
+	  TEXT = Playrlst.wnd:Remove;
+	END
+
+    WINDOW
+  	  1223 290 20 170 15 ENTRYFIELD (Address);
+	  STATUS = ENABLED;
+	  TEXT = Playrlst.wnd:Address;
+	  DATA = 32;
+	END
+
+    WINDOW
+      1224 330 40 60 20 PUSHBUTTON (Ban player);
+      STATUS = ENABLED;
+	  STYLE = MOUSETRACK;
+	  TEXT = Playrlst.wnd:Ban;
+	END
+
+    WINDOW
+      1225 400 40 60 20 PUSHBUTTON (Allow);
+      STATUS = ENABLED;
+	  STYLE = MOUSETRACK;
+	  TEXT = Playrlst.wnd:Allow;
+	END
+
+  END
+END
+

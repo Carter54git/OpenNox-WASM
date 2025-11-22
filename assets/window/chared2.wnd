@@ -1,0 +1,387 @@
+ENABLEDCOLOR = 255 0 0;
+HILITECOLOR = 255 192 192;
+DISABLEDCOLOR = 128 128 128;
+SELECTEDCOLOR = 255 128 128;
+TEXTCOLOR = 255 0 0;
+BACKGROUNDCOLOR = 0 0 0;
+
+WINDOW
+  200 0 0 640 200 USER;
+  STATUS = ENABLED;
+
+  CHILD
+    WINDOW
+      290 550 170 80 20 PUSHBUTTON (Apply Button);
+      STATUS = ENABLED;
+      STYLE = MOUSETRACK;
+      TEXT = CharEd2.wnd:Apply;
+    END
+
+    WINDOW
+      203 460 120 150 20 ENTRYFIELD (Player Name);
+      STATUS = ENABLED+ONE_LINE;
+      TEXT = CharEdit.wnd:Name;
+      DATA = 32;
+    END
+
+    WINDOW
+      204 490 140 50 20 RADIOBUTTON (Sex Male);
+      STATUS = ENABLED;
+      GROUP = 5;
+      TEXT = CharEdit.wnd:Male;
+    END
+
+    WINDOW
+      205 555 140 50 20 RADIOBUTTON (Sex Female);
+      STATUS = ENABLED;
+      GROUP = 5;
+      TEXT = CharEdit.wnd:Female;
+    END
+
+    WINDOW
+      210 20 0 200 200 USER (Color Edit Window);
+      STATUS = ENABLED;
+
+      CHILD
+        WINDOW
+          211 5 10 40 20 RADIOBUTTON (Shirt Button);
+          STATUS = ENABLED;
+          GROUP = 1;
+          STYLE = MOUSETRACK;
+          SELECTEDCOLOR = 255 255 255;
+          HILITECOLOR = 255 255 255;
+          TEXT = CharEdit.wnd:Shirt;
+        END
+
+        WINDOW
+          212 55 10 40 20 RADIOBUTTON (Pants Button);
+          STATUS = ENABLED;
+          GROUP = 1;
+          STYLE = MOUSETRACK;
+          SELECTEDCOLOR = 255 255 255;
+          HILITECOLOR = 255 255 255;
+          TEXT = CharEdit.wnd:Pants;
+	  END
+
+        WINDOW
+          213 105 10 40 20 RADIOBUTTON (Cloak Button);
+          STATUS = ENABLED;
+          GROUP = 1;
+          STYLE = MOUSETRACK;
+          SELECTEDCOLOR = 255 255 255;
+          HILITECOLOR = 255 255 255;
+          TEXT = CharEdit.wnd:Cloak;
+        END
+
+        WINDOW
+          214 22 30 40 20 RADIOBUTTON (Skin Button);
+          STATUS = ENABLED;
+          GROUP = 1;
+          STYLE = MOUSETRACK;
+          SELECTEDCOLOR = 255 255 255;
+          HILITECOLOR = 255 255 255;
+          TEXT = CharEdit.wnd:Skin;
+        END
+
+        WINDOW
+          215 87 30 40 20 RADIOBUTTON (Hair Button);
+          STATUS = ENABLED;
+          GROUP = 1;
+          STYLE = MOUSETRACK;
+          SELECTEDCOLOR = 255 255 255;
+          HILITECOLOR = 255 255 255;
+          TEXT = CharEdit.wnd:Hair;
+        END
+
+        WINDOW
+          220 0 50 150 150 PUSHBUTTON (Color Wheel);
+          STATUS = ENABLED+IMAGE;
+          STYLE = MOUSETRACK;
+          BACKGROUNDIMAGE = ColorPicker;
+          ENABLEDIMAGE = NULL;
+          DISABLEDIMAGE = NULL;
+          HILITEIMAGE = NULL;
+          SELECTEDIMAGE = NULL;
+        END
+
+        WINDOW
+          221 160 50 15 150 VERTSLIDER (Brightness slider);
+          STATUS = ENABLED;
+          ENABLEDCOLOR = 0 0 0;
+          HILITECOLOR = 255 0 0;
+          BACKGROUNDCOLOR = 128 0 0;
+          DATA = 64 255;
+        END
+      END
+    END
+
+
+    WINDOW
+      250 240 0 160 160 USER (Alignment region);
+      STATUS = ENABLED;
+
+      CHILD
+        WINDOW
+          251 60 10 40 20 RADIOBUTTON (Red alignment);
+          STATUS = ENABLED;
+          GROUP = 3;
+          STYLE = MOUSETRACK;
+          ENABLEDCOLOR = 255 0 0;
+          SELECTEDCOLOR = 255 0 0;
+          TEXTCOLOR = 255 0 0;
+        END
+
+        WINDOW
+          256 30 30 30 20 RADIOBUTTON (Violet alignment);
+          STATUS = ENABLED;
+          GROUP = 3;
+          STYLE = MOUSETRACK;
+          ENABLEDCOLOR = 255 0 255;
+          SELECTEDCOLOR = 255 0 255;
+          TEXTCOLOR = 255 0 255;
+        END
+
+        WINDOW
+          257 60 30 30 20 RADIOBUTTON (White alignment);
+          STATUS = ENABLED;
+          GROUP = 3;
+          STYLE = MOUSETRACK;
+          ENABLEDCOLOR = 255 255 255;
+          SELECTEDCOLOR = 255 255 255;
+          TEXTCOLOR = 255 255 255;
+        END
+
+        WINDOW
+          255 90 30 30 20 RADIOBUTTON (Yellow alignment);
+          STATUS = ENABLED;
+          GROUP = 3;
+          STYLE = MOUSETRACK;
+          ENABLEDCOLOR = 255 255 0;
+          SELECTEDCOLOR = 255 255 0;
+          TEXTCOLOR = 255 255 0;
+        END
+
+        WINDOW
+          253 10 50 40 20 RADIOBUTTON (Blue alignment);
+          STATUS = ENABLED;
+          GROUP = 3;
+          STYLE = MOUSETRACK;
+          ENABLEDCOLOR = 0 0 255;
+          SELECTEDCOLOR = 0 0 255;
+          TEXTCOLOR = 0 0 255;
+        END
+
+        WINDOW
+          254 60 50 40 20 RADIOBUTTON (Azure alignment);
+          STATUS = ENABLED;
+          GROUP = 3;
+          STYLE = MOUSETRACK;
+          ENABLEDCOLOR = 0 255 255;
+          SELECTEDCOLOR = 0 255 255;
+          TEXTCOLOR = 0 255 255;
+        END
+
+        WINDOW
+          252 110 50 40 20 RADIOBUTTON (Green alignment);
+          STATUS = ENABLED;
+          GROUP = 3;
+          STYLE = MOUSETRACK;
+          ENABLEDCOLOR = 0 255 0;
+          SELECTEDCOLOR = 0 255 0;
+          TEXTCOLOR = 0 255 0;
+        END
+
+        WINDOW
+          260 16 100 20 10 PUSHBUTTON (Red strength table);
+          ENABLEDCOLOR = 255 0 0;
+          SELECTEDCOLOR = 255 0 0;
+          BACKGROUNDCOLOR = 255 0 0;
+          DISABLEDCOLOR = 0 0 0;
+          TEXTCOLOR = 255 0 0;
+        END
+
+        WINDOW
+          261 38 100 20 10 PUSHBUTTON (Red strength table);
+          ENABLEDCOLOR = 255 0 0;
+          SELECTEDCOLOR = 255 0 0;
+          DISABLEDCOLOR = 0 0 0;
+          BACKGROUNDCOLOR = 255 0 0;
+        END
+
+        WINDOW
+          262 60 100 20 10 PUSHBUTTON (Red strength table);
+          ENABLEDCOLOR = 255 0 0;
+          SELECTEDCOLOR = 255 0 0;
+          BACKGROUNDCOLOR = 255 0 0;
+          DISABLEDCOLOR = 0 0 0;
+        END
+
+        WINDOW
+          263 82 100 20 10 PUSHBUTTON (Red strength table);
+          ENABLEDCOLOR = 255 0 0;
+          SELECTEDCOLOR = 255 0 0;
+          BACKGROUNDCOLOR = 255 0 0;
+          DISABLEDCOLOR = 0 0 0;
+        END
+
+        WINDOW
+          264 104 100 20 10 PUSHBUTTON (Red strength table);
+          ENABLEDCOLOR = 255 0 0;
+          SELECTEDCOLOR = 255 0 0;
+          BACKGROUNDCOLOR = 255 0 0;
+          DISABLEDCOLOR = 0 0 0;
+        END
+
+        WINDOW
+          265 16 120 20 10 PUSHBUTTON (Green strength table);
+          ENABLEDCOLOR = 0 255 0;
+          SELECTEDCOLOR = 0 255 0;
+          BACKGROUNDCOLOR = 0 255 0;
+          DISABLEDCOLOR = 0 0 0;
+        END
+
+        WINDOW
+          266 38 120 20 10 PUSHBUTTON (Green strength table);
+          ENABLEDCOLOR = 0 255 0;
+          SELECTEDCOLOR = 0 255 0;
+          BACKGROUNDCOLOR = 0 255 0;
+          DISABLEDCOLOR = 0 0 0;
+        END
+
+        WINDOW
+          267 60 120 20 10 PUSHBUTTON (Green strength table);
+          ENABLEDCOLOR = 0 255 0;
+          SELECTEDCOLOR = 0 255 0;
+          BACKGROUNDCOLOR = 0 255 0;
+          DISABLEDCOLOR = 0 0 0;
+        END
+
+	    WINDOW
+		  268 82 120 20 10 PUSHBUTTON (Green strength table);
+		  ENABLEDCOLOR = 0 255 0;
+		  SELECTEDCOLOR = 0 255 0;
+          BACKGROUNDCOLOR = 0 255 0;
+		  DISABLEDCOLOR = 0 0 0;
+		END
+
+	    WINDOW
+		  269 104 120 20 10 PUSHBUTTON (Green strength table);
+		  ENABLEDCOLOR = 0 255 0;
+		  SELECTEDCOLOR = 0 255 0;
+          BACKGROUNDCOLOR = 0 255 0;
+		  DISABLEDCOLOR = 0 0 0;
+		END
+
+	    WINDOW
+		  270 16 140 20 10 PUSHBUTTON (Blue strength table);
+		  ENABLEDCOLOR = 0 0 255;
+		  SELECTEDCOLOR = 0 0 255;
+          BACKGROUNDCOLOR = 0 0 255;
+		  DISABLEDCOLOR = 0 0 0;
+		END
+
+	    WINDOW
+		  271 38 140 20 10 PUSHBUTTON (Blue strength table);
+		  ENABLEDCOLOR = 0 0 255;
+		  SELECTEDCOLOR = 0 0 255;
+          BACKGROUNDCOLOR = 0 0 255;
+		  DISABLEDCOLOR = 0 0 0;
+		END
+
+	    WINDOW
+		  272 60 140 20 10 PUSHBUTTON (Blue strength table);
+		  ENABLEDCOLOR = 0 0 255;
+		  SELECTEDCOLOR = 0 0 255;
+          BACKGROUNDCOLOR = 0 0 255;
+		  DISABLEDCOLOR = 0 0 0;
+		END
+
+	    WINDOW
+		  273 82 140 20 10 PUSHBUTTON (Blue strength table);
+		  ENABLEDCOLOR = 0 0 255;
+		  SELECTEDCOLOR = 0 0 255;
+          BACKGROUNDCOLOR = 0 0 255;
+		  DISABLEDCOLOR = 0 0 0;
+		END
+
+	    WINDOW
+		  274 104 140 20 10 PUSHBUTTON (Blue strength table);
+		  ENABLEDCOLOR = 0 0 255;
+		  SELECTEDCOLOR = 0 0 255;
+          BACKGROUNDCOLOR = 0 0 255;
+		  DISABLEDCOLOR = 0 0 0;
+		END
+	  END
+	END
+
+    WINDOW
+      280 460 20 180 100 USER (Attribute region);
+      STATUS = ENABLED;
+
+	  CHILD
+	    WINDOW
+		  281 40 15 100 11 HORZSLIDER (Health slider);
+          STATUS = ENABLED;
+		  ENABLEDCOLOR = 0 0 0;
+		  HILITECOLOR = 255 0 0;
+		  BACKGROUNDCOLOR = 128 0 0;
+		  DATA = 0 100;
+		END
+
+	    WINDOW
+		  282 40 35 100 11 HORZSLIDER (Mana slider);
+          STATUS = ENABLED;
+		  ENABLEDCOLOR = 0 0 0;
+		  HILITECOLOR = 255 0 0;
+		  BACKGROUNDCOLOR = 128 0 0;
+		  DATA = 0 100;
+		END
+
+	    WINDOW
+		  283 40 55 100 11 HORZSLIDER (Strength slider);
+          STATUS = ENABLED;
+		  ENABLEDCOLOR = 0 0 0;
+		  HILITECOLOR = 255 0 0;
+		  BACKGROUNDCOLOR = 128 0 0;
+		  DATA = 0 100;
+		END
+
+	    WINDOW
+		  284 40 75 100 11 HORZSLIDER (Speed slider);
+          STATUS = ENABLED;
+		  ENABLEDCOLOR = 0 0 0;
+		  HILITECOLOR = 255 0 0;
+		  BACKGROUNDCOLOR = 128 0 0;
+		  DATA = 0 100;
+		END
+
+	    WINDOW
+		  285 150 15 15 15 CHECKBOX (Health hold box);
+          STATUS = ENABLED;
+          SELECTEDCOLOR = 255 255 255;
+		END
+
+	    WINDOW
+		  286 150 35 15 15 CHECKBOX (Mana hold box);
+          STATUS = ENABLED;
+          SELECTEDCOLOR = 255 255 255;
+		END
+
+	    WINDOW
+		  287 150 55 15 15 CHECKBOX (Strength hold box);
+          STATUS = ENABLED;
+          SELECTEDCOLOR = 255 255 255;
+		END
+
+	    WINDOW
+		  288 150 75 15 15 CHECKBOX (Speed hold box);
+          STATUS = ENABLED;
+          SELECTEDCOLOR = 255 255 255;
+		END
+
+	  END
+	END
+
+  END
+END
+

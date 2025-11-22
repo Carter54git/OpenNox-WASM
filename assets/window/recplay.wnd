@@ -1,0 +1,64 @@
+ENABLEDCOLOR = 255 0 0;
+HILITECOLOR = 255 192 192;
+DISABLEDCOLOR = 128 128 128;
+SELECTEDCOLOR = 255 128 128;
+TEXTCOLOR = 255 0 0;
+BACKGROUNDCOLOR = 0 0 0;
+
+WINDOW
+  3500 0 0 640 480 USER;
+  STATUS = ENABLED;
+
+  CHILD
+    WINDOW
+	3501 40 40 200 20 CHECKBOX (start recording);
+    	STATUS = ENABLED;
+	TEXT = recplay.wnd:StartRecording;
+    END
+
+    WINDOW
+      3502 60 70 200 20 ENTRYFIELD;
+      STATUS = ENABLED;
+      ENABLEDCOLOR = 255 0 0;
+      TEXT = recplay.wnd:recordfile;
+      DATA = 64 130;
+    END
+
+    WINDOW
+      3503 60 100 200 20 ENTRYFIELD;
+      STATUS = ENABLED;
+      ENABLEDCOLOR = 255 0 0;
+      TEXT = recplay.wnd:mapfile;
+      DATA = 64 130;
+    END
+
+    WINDOW
+	3504 40 140 200 20 CHECKBOX (Playback);
+    	STATUS = ENABLED;
+	TEXT = recplay.wnd:playback;
+    END
+
+    WINDOW
+      3505 60 170 200 20 ENTRYFIELD;
+      STATUS = ENABLED;
+      ENABLEDCOLOR = 255 0 0;
+      TEXT = recplay.wnd:playfile;
+      DATA = 64 130;
+    END
+
+    WINDOW
+	3506 40 200 200 20 CHECKBOX (Normal);
+    	STATUS = ENABLED;
+	TEXT = recplay.wnd:Normal;
+    END
+
+    WINDOW
+      3507 460 450 80 20 PUSHBUTTON;
+      TEXT = WindowDir:OK;
+      STATUS = ENABLED;
+      STYLE = MOUSETRACK;
+    END
+
+  END
+END
+

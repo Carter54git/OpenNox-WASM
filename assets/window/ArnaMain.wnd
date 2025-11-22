@@ -1,0 +1,55 @@
+ENABLEDCOLOR = TRANSPARENT;
+HILITECOLOR = 192 128 128;
+DISABLEDCOLOR = TRANSPARENT;
+SELECTEDCOLOR = TRANSPARENT;
+TEXTCOLOR = 240 180 42;
+BACKGROUNDCOLOR = TRANSPARENT;
+
+
+WINDOW
+  400 0 0 640 480 USER;
+  STATUS = ENABLED+NOFOCUS;
+
+  CHILD
+    WINDOW
+      410 0 0 640 240 USER;
+      STATUS = ENABLED+NOFOCUS;
+      
+      CHILD
+        WINDOW
+          411 237 182 166 35 PUSHBUTTON;
+          STATUS = ENABLED+IMAGE+SMOOTH_TEXT+NOFOCUS;
+          STYLE = MOUSETRACK;
+          IMAGEOFFSET = -237 -182;
+          HILITEIMAGE = Button5Lit;
+          SELECTEDIMAGE = Button5Lit;
+          BACKGROUNDIMAGE = Button5Unlit;
+          ENABLEDIMAGE = NULL;
+          DISABLEDIMAGE = Button5Unlit;
+          TEXT = ArnaMain.wnd:WOLAPI;
+        END
+      END
+    END
+
+    WINDOW
+      420 0 240 640 240 USER;
+      STATUS = ENABLED;
+      
+      CHILD
+        WINDOW
+          421 237 16 166 35 PUSHBUTTON;
+          STATUS = ENABLED+IMAGE+SMOOTH_TEXT+NOFOCUS;
+          STYLE = MOUSETRACK;
+          IMAGEOFFSET = -237 -256;
+          HILITEIMAGE = Button6Lit;
+          SELECTEDIMAGE = Button6Lit;
+          BACKGROUNDIMAGE = Button6Unlit;
+          ENABLEDIMAGE = NULL;
+          DISABLEDIMAGE = Button6Unlit;
+          TEXT = ArnaMain.wnd:LAN;
+        END
+      END
+    END
+  END
+END
+

@@ -1,0 +1,266 @@
+ENABLEDCOLOR = 255 0 0;
+HILITECOLOR = 255 192 192;
+DISABLEDCOLOR = 128 128 128;
+SELECTEDCOLOR = 255 128 128;
+TEXTCOLOR = 255 0 0;
+BACKGROUNDCOLOR = 0 0 0;
+
+WINDOW
+  200 0 0 640 480 USER;
+  STATUS = ENABLED+IMAGE;
+  BACKGROUNDIMAGE = MenuSystem3;
+
+  CHILD
+    WINDOW
+      202 131 435 179 34 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE;
+      STYLE = MOUSETRACK;
+      IMAGEOFFSET = -8 -3;
+      BACKGROUNDIMAGE = SmallAcceptButton;
+      SELECTEDIMAGE = SmallAcceptButtonLit;
+      ENABLEDIMAGE = NULL;
+      HILITEIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+    END
+
+    WINDOW
+      230 31 337 179 34 RADIOBUTTON;
+      STATUS = ENABLED+IMAGE;
+      GROUP = 10;
+      STYLE = MOUSETRACK;
+      IMAGEOFFSET = -8 -3;
+      BACKGROUNDIMAGE = SmallWarriorButton;
+      SELECTEDIMAGE = SmallWarriorButtonLit;
+      ENABLEDIMAGE = NULL;
+      HILITEIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+    END
+
+    WINDOW
+      233 231 337 179 34 RADIOBUTTON;
+      STATUS = ENABLED+IMAGE;
+      GROUP = 10;
+      STYLE = MOUSETRACK;
+      IMAGEOFFSET = -8 -3;
+      BACKGROUNDIMAGE = SmallConjurerButton;
+      SELECTEDIMAGE = SmallConjurerButtonLit;
+      ENABLEDIMAGE = NULL;
+      HILITEIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+    END
+
+    WINDOW
+      231 431 337 179 34 RADIOBUTTON;
+      STATUS = ENABLED+IMAGE;
+      GROUP = 10;
+      STYLE = MOUSETRACK;
+      IMAGEOFFSET = -8 -3;
+      BACKGROUNDIMAGE = SmallWizardButton;
+      SELECTEDIMAGE = SmallWizardButtonLit;
+      ENABLEDIMAGE = NULL;
+      HILITEIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+    END
+
+    WINDOW
+      205 235 205 170 70 USER;
+      STATUS = ENABLED+HIDDEN;
+      BACKGROUNDCOLOR = 128 128 128;
+      TEXTCOLOR = 240 180 42;
+
+      CHILD
+        WINDOW
+          206 10 10 150 20 ENTRYFIELD;
+          STATUS = ENABLED+ONE_LINE;
+          ENABLEDCOLOR = 128 128 128;
+          HILITECOLOR = 128 128 128;
+          DISABLEDCOLOR = 128 128 128;
+          SELECTEDCOLOR = 240 180 42;
+          TEXTCOLOR = 240 180 42;
+          TEXT = CharEdit.wnd:Name;
+          DATA = 25;
+        END
+
+        WINDOW
+          207 10 40 150 20 PUSHBUTTON;
+          STATUS = ENABLED;
+          ENABLEDCOLOR = 128 128 128;
+          HILITECOLOR = 128 128 128;
+          DISABLEDCOLOR = 128 128 128;
+          SELECTEDCOLOR = 128 128 128;
+          TEXTCOLOR = 240 180 42;
+          TEXT = WindowDir:OK;
+          DATA = 25;
+        END
+
+        WINDOW
+          30000 1 1 168 68 USER;
+          BACKGROUNDCOLOR = 8 8 8;
+        END
+      END
+    END
+
+
+    WINDOW
+      210 420 0 200 200 USER;
+      STATUS = HIDDEN;
+
+      CHILD
+        WINDOW
+          214 22 30 40 20 RADIOBUTTON;
+          STATUS = ENABLED;
+          GROUP = 1;
+          STYLE = MOUSETRACK;
+          SELECTEDCOLOR = 255 255 255;
+          HILITECOLOR = 255 255 255;
+          TEXT = CharEdit.wnd:Skin;
+        END
+
+        WINDOW
+          215 87 30 40 20 RADIOBUTTON;
+          STATUS = ENABLED;
+          GROUP = 1;
+          STYLE = MOUSETRACK;
+          SELECTEDCOLOR = 255 255 255;
+          HILITECOLOR = 255 255 255;
+          TEXT = CharEdit.wnd:Hair;
+        END
+
+        WINDOW
+          220 0 50 150 150 PUSHBUTTON;
+          STATUS = ENABLED+IMAGE;
+          STYLE = MOUSETRACK;
+          BACKGROUNDIMAGE = ColorPicker;
+          ENABLEDIMAGE = NULL;
+          DISABLEDIMAGE = NULL;
+          HILITEIMAGE = NULL;
+          SELECTEDIMAGE = NULL;
+        END
+
+        WINDOW
+          221 160 50 15 150 VERTSLIDER (Brightness slider);
+          STATUS = ENABLED;
+          ENABLEDCOLOR = 0 0 0;
+          HILITECOLOR = 255 0 0;
+          BACKGROUNDCOLOR = 128 0 0;
+          DATA = 64 255;
+        END
+      END
+    END
+
+    WINDOW
+      240 220 300 200 100 USER (Facial Hair);
+      STATUS = HIDDEN;
+
+      CHILD
+        WINDOW
+          241 0 0 200 20 STATICTEXT;
+          ENABLEDCOLOR = 0 0 0;
+          HILITECOLOR = 0 0 0;
+          DISABLEDCOLOR = 0 0 0;
+          SELECTEDCOLOR = 0 0 0;
+          TEXTCOLOR = 255 0 0;
+          BACKGROUNDCOLOR = 0 0 0;
+          STATUS = DISABLED;
+          DATA = 0 0 CharEdit.wnd:FacialHair;
+        END
+        
+		WINDOW
+          245 0 30 100 10 RADIOBUTTON;
+          STATUS = ENABLED;
+          GROUP = 2;
+          STYLE = MOUSETRACK;
+          TEXT = CharEdit.wnd:NoHair;
+        END
+
+		WINDOW
+          246 0 50 100 10 RADIOBUTTON;
+          STATUS = ENABLED;
+          GROUP = 2;
+          STYLE = MOUSETRACK;
+          TEXT = CharEdit.wnd:Beard;
+        END
+
+		WINDOW
+          247 0 70 100 10 RADIOBUTTON;
+          STATUS = ENABLED;
+          GROUP = 2;
+          STYLE = MOUSETRACK;
+          TEXT = CharEdit.wnd:Mustache;
+        END
+
+		WINDOW
+          248 0 90 100 10 RADIOBUTTON;
+          STATUS = ENABLED;
+          GROUP = 2;
+          STYLE = MOUSETRACK;
+          TEXT = CharEdit.wnd:Goatee;
+        END
+
+      END
+    END
+
+    WINDOW
+      280 460 20 180 100 USER (Attribute region);
+      STATUS = HIDDEN;
+
+	  CHILD
+	    WINDOW
+            281 40 15 100 11 HORZSLIDER (Health slider);
+            ENABLEDCOLOR = 0 0 0;
+            HILITECOLOR = 255 0 0;
+            BACKGROUNDCOLOR = 128 0 0;
+            DATA = 0 100;
+          END
+
+	    WINDOW
+            282 40 35 100 11 HORZSLIDER (Mana slider);
+            ENABLEDCOLOR = 0 0 0;
+            HILITECOLOR = 255 0 0;
+            BACKGROUNDCOLOR = 128 0 0;
+            DATA = 0 100;
+          END
+
+          WINDOW
+            283 40 55 100 11 HORZSLIDER (Strength slider);
+            ENABLEDCOLOR = 0 0 0;
+            HILITECOLOR = 255 0 0;
+            BACKGROUNDCOLOR = 128 0 0;
+            DATA = 0 100;
+          END
+
+	    WINDOW
+            284 40 75 100 11 HORZSLIDER (Speed slider);
+            ENABLEDCOLOR = 0 0 0;
+            HILITECOLOR = 255 0 0;
+            BACKGROUNDCOLOR = 128 0 0;
+            DATA = 0 100;
+          END
+	  END
+	END
+
+    WINDOW
+      201 331 435 179 34 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE;
+      STYLE = MOUSETRACK;
+      IMAGEOFFSET = -8 -3;
+      BACKGROUNDIMAGE = SmallBackButton;
+      SELECTEDIMAGE = SmallBackButtonLit;
+      ENABLEDIMAGE = NULL;
+      HILITEIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+    END
+
+    WINDOW
+      299 630 0 10 10 PUSHBUTTON;
+      STATUS = ENABLED;
+      ENABLEDCOLOR = TRANSPARENT;
+      HILITECOLOR = TRANSPARENT;
+      DISABLEDCOLOR = TRANSPARENT;
+      SELECTEDCOLOR = TRANSPARENT;
+      TEXTCOLOR = TRANSPARENT;
+      BACKGROUNDCOLOR = TRANSPARENT;
+    END
+  END
+END
+

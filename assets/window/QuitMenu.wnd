@@ -1,0 +1,131 @@
+ENABLEDCOLOR = 128 128 128;
+HILITECOLOR = 128 128 128;
+DISABLEDCOLOR = 128 128 128;
+SELECTEDCOLOR = 240 180 42;
+TEXTCOLOR = 240 180 42;
+BACKGROUNDCOLOR = 0 0 0;
+
+WINDOW
+  9000 0 50 220 285 USER;
+  STATUS = ABOVE+ENABLED+BORDER;
+
+  CHILD
+    WINDOW
+      9006 43 19 132 24 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      SELECTEDIMAGE = UIButtonHugeLit;
+      HILITEIMAGE = UIButtonHugeLit;
+      BACKGROUNDIMAGE = UIButtonHuge;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = UIButtonHugeDis;
+      IMAGEOFFSET = -33 -9;
+      TEXT = QuitMenu.wnd:Resume;
+    END
+
+    WINDOW
+      9001 43 64 132 24 PUSHBUTTON (SinglePlayer);
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      SELECTEDIMAGE = UIButtonHugeLit;
+      HILITEIMAGE = UIButtonHugeLit;
+      BACKGROUNDIMAGE = UIButtonHuge;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = UIButtonHugeDis;
+      IMAGEOFFSET = -33 -9;
+      TEXT = QuitMenu.wnd:AutoLoad;
+    END
+
+    WINDOW
+      9002 43 109 132 24 PUSHBUTTON (SinglePlayer);
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      SELECTEDIMAGE = UIButtonHugeLit;
+      HILITEIMAGE = UIButtonHugeLit;
+      BACKGROUNDIMAGE = UIButtonHuge;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = UIButtonHugeDis;
+      IMAGEOFFSET = -33 -9;
+      TEXT = QuitMenu.wnd:AutoSave;
+    END
+
+    WINDOW
+      9008 43 64 132 24 PUSHBUTTON (MultiPlayer);
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      SELECTEDIMAGE = UIButtonHugeLit;
+      HILITEIMAGE = UIButtonHugeLit;
+      BACKGROUNDIMAGE = UIButtonHuge;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = UIButtonHugeDis;
+      IMAGEOFFSET = -33 -9;
+      TEXT = QuitMenu.wnd:Gameplay;
+    END
+
+    WINDOW
+      9007 43 109 132 24 PUSHBUTTON (MultiPlayer);
+      STATUS = ENABLED+IMAGE+NOFOCUS+HIDDEN;
+      STYLE = MOUSETRACK;
+      SELECTEDIMAGE = UIButtonHugeLit;
+      HILITEIMAGE = UIButtonHugeLit;
+      BACKGROUNDIMAGE = UIButtonHuge;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = UIButtonHugeDis;
+      IMAGEOFFSET = -33 -9;
+      TEXT = QuitMenu.wnd:Observe;
+    END
+
+    WINDOW
+      9003 43 154 132 24 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      SELECTEDIMAGE = UIButtonHugeLit;
+      HILITEIMAGE = UIButtonHugeLit;
+      BACKGROUNDIMAGE = UIButtonHuge;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = UIButtonHugeDis;
+      IMAGEOFFSET = -33 -9;
+      TEXT = QuitMenu.wnd:Save;
+    END
+
+    WINDOW
+      9005 43 199 132 24 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      SELECTEDIMAGE = UIButtonHugeLit;
+      HILITEIMAGE = UIButtonHugeLit;
+      BACKGROUNDIMAGE = UIButtonHuge;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = UIButtonHugeDis;
+      IMAGEOFFSET = -33 -9;
+      TEXT = QuitMenu.wnd:Options;
+    END
+
+    WINDOW
+      9004 43 244 132 24 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      SELECTEDIMAGE = UIButtonHugeLit;
+      HILITEIMAGE = UIButtonHugeLit;
+      BACKGROUNDIMAGE = UIButtonHuge;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = UIButtonHugeDis;
+      IMAGEOFFSET = -33 -9;
+      TEXT = QuitMenu.wnd:Quit;
+    END
+
+    WINDOW
+      9009 43 244 132 24 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE+NOFOCUS+HIDDEN;
+      STYLE = MOUSETRACK;
+      SELECTEDIMAGE = UIButtonHugeLit;
+      HILITEIMAGE = UIButtonHugeLit;
+      BACKGROUNDIMAGE = UIButtonHuge;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = UIButtonHugeDis;
+      IMAGEOFFSET = -33 -9;
+      TEXT = WindowDir:Blank;
+    END
+  END
+END
+

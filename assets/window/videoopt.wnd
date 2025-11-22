@@ -1,0 +1,55 @@
+ENABLEDCOLOR = 255 0 0;
+HILITECOLOR = 255 192 192;
+DISABLEDCOLOR = 128 128 128;
+SELECTEDCOLOR = 255 128 128;
+TEXTCOLOR = 255 0 0;
+BACKGROUNDCOLOR = 0 0 0;
+
+WINDOW
+  800 0 0 640 480 USER;
+  STATUS = ENABLED;
+
+  CHILD
+    WINDOW
+      801 30 20 160 255 SCROLLLISTBOX (Video Mode List);
+      STATUS = ENABLED;
+      TEXT = VideoOpt.wnd:CurrentMode;
+      DATA = 100 10 0 0 0 0 0;
+    END
+
+    WINDOW
+      802 190 30 10 15 PUSHBUTTON;
+      STATUS = ENABLED;
+      STYLE = MOUSETRACK;
+      TEXT = WindowDir:Up;
+    END
+
+    WINDOW
+      803 190 45 10 15 PUSHBUTTON;
+      STATUS = ENABLED;
+      STYLE = MOUSETRACK;
+      TEXT = WindowDir:Down;
+    END
+
+    WINDOW
+      830 460 50 15 200 VERTSLIDER (FX volume slider);
+      STATUS = ENABLED;
+      DATA = 0 100;
+    END
+
+    WINDOW
+      831 540 50 15 200 VERTSLIDER (Music volume slider);
+      STATUS = ENABLED;
+      DATA = 0 100;
+    END
+
+    WINDOW
+      804 550 450 80 20 PUSHBUTTON;
+      STATUS = ENABLED;
+      STYLE = MOUSETRACK;
+      TEXT = WindowDir:Back;
+    END
+
+  END
+END
+

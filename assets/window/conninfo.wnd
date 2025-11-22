@@ -1,0 +1,85 @@
+ENABLEDCOLOR = 255 0 0;
+HILITECOLOR = 255 192 192;
+DISABLEDCOLOR = 128 128 128;
+SELECTEDCOLOR = 255 128 128;
+TEXTCOLOR = 255 0 0;
+BACKGROUNDCOLOR = 0 0 0;
+
+WINDOW
+  400 0 0 640 480 USER;
+  STATUS = ENABLED;
+
+  CHILD
+    WINDOW
+      406 240 190 160 20 PUSHBUTTON (Local Network);
+      STATUS = ENABLED;
+      STYLE = MOUSETRACK;
+      TEXTCOLOR = 255 255 255;
+      TEXT = ConnInfo.wnd:PlayOnLAN;
+    END
+
+   WINDOW
+      405 240 220 160 20 PUSHBUTTON (Internet Game);
+      STATUS = ENABLED;
+      STYLE = MOUSETRACK;
+      TEXTCOLOR = 255 255 255;
+      TEXT = ConnInfo.wnd:PlayOnInternet;
+    END
+
+    WINDOW
+      407 240 250 160 20 PUSHBUTTON (Go to Westwood Online);
+      STATUS = DISABLED;
+      STYLE = MOUSETRACK;
+      TEXTCOLOR = 255 255 255;
+      TEXT = ConnInfo.wnd:PlayOnWOLAPI;
+    END
+
+    WINDOW
+      408 550 450 80 20 PUSHBUTTON;
+      STATUS = ENABLED;
+      STYLE = MOUSETRACK;
+      TEXT = WindowDir:BACK;
+    END
+
+    WINDOW
+      401 250 50 160 20 STATICTEXT;
+      STATUS = DISABLED;
+      ENABLEDCOLOR = 0 0 0;
+      DISABLEDCOLOR = 0 0 0;
+      HILITECOLOR = 0 0 0;
+      TEXTCOLOR = 255 255 0;
+      DATA = 0 0 ConnInfo.wnd:WhatYouWant;
+    END
+
+    WINDOW
+      402 250 70 200 20 RADIOBUTTON (Join game options);
+      STATUS = ENABLED;
+      STYLE = MOUSETRACK;
+      TEXTCOLOR = 255 255 255;
+      SELECTEDCOLOR = 255 0 0;
+      GROUP = 1;
+      TEXT = ConnInfo.wnd:JoinMultiplayerGame;
+    END
+
+    WINDOW
+      403 250 90 200 20 RADIOBUTTON (Start server);
+      STATUS = ENABLED;
+      STYLE = MOUSETRACK;
+      SELECTEDCOLOR = 255 0 0;
+      TEXTCOLOR = 255 255 255;
+      GROUP = 1;
+      TEXT = ConnInfo.wnd:StartMultiplayerGame;
+    END
+
+    WINDOW
+      404 250 160 160 20 STATICTEXT;
+      STATUS = DISABLED;
+      ENABLEDCOLOR = 0 0 0;
+      DISABLEDCOLOR = 0 0 0;
+      HILITECOLOR = 0 0 0;
+      TEXTCOLOR = 255 255 0;
+      DATA = 0 0 ConnInfo.wnd:HowYouWant;
+    END
+  END
+END
+

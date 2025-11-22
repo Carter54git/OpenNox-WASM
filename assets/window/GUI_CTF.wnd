@@ -1,0 +1,142 @@
+ENABLEDCOLOR = TRANSPARENT;
+HILITECOLOR = TRANSPARENT;
+DISABLEDCOLOR = TRANSPARENT;
+SELECTEDCOLOR = TRANSPARENT;
+TEXTCOLOR = 240 180 42;
+BACKGROUNDCOLOR = TRANSPARENT;
+
+WINDOW
+  8800 0 0 80 312 USER;
+  STATUS = ENABLED+ABOVE;
+
+  CHILD
+    WINDOW
+      8811 0 0 32 32 USER;
+      STATUS = ENABLED+HIDDEN+IMAGE;
+      BACKGROUNDIMAGE = FlagAtHomeRed;
+      ENABLEDIMAGE = FlagCarriedRed;
+      DISABLEDIMAGE = FlagDroppedInFieldRed;
+    END
+
+    WINDOW
+      8812 0 40 32 32 USER;
+      STATUS = ENABLED+HIDDEN+IMAGE;
+      BACKGROUNDIMAGE = FlagAtHomeBlue;
+      ENABLEDIMAGE = FlagCarriedBlue;
+      DISABLEDIMAGE = FlagDroppedInFieldBlue;
+    END
+
+    WINDOW
+      8813 0 80 32 32 USER;
+      STATUS = ENABLED+HIDDEN+IMAGE;
+      BACKGROUNDIMAGE = FlagAtHomeGreen;
+      ENABLEDIMAGE = FlagCarriedGreen;
+      DISABLEDIMAGE = FlagDroppedInFieldGreen;
+    END
+
+    WINDOW
+      8814 0 120 32 32 USER;
+      STATUS = ENABLED+HIDDEN+IMAGE;
+      BACKGROUNDIMAGE = FlagAtHomeYellow;
+      ENABLEDIMAGE = FlagCarriedYellow;
+      DISABLEDIMAGE = FlagDroppedInFieldYellow;
+    END
+
+    WINDOW
+      8815 40 0 32 32 USER;
+      STATUS = ENABLED+HIDDEN+IMAGE;
+      BACKGROUNDIMAGE = FlagAtHomeRed;
+      ENABLEDIMAGE = FlagCarriedRed;
+      DISABLEDIMAGE = FlagDroppedInFieldRed;
+    END
+
+    WINDOW
+      8816 40 40 32 32 USER;
+      STATUS = ENABLED+HIDDEN+IMAGE;
+      BACKGROUNDIMAGE = FlagAtHomeRed;
+      ENABLEDIMAGE = FlagCarriedRed;
+      DISABLEDIMAGE = FlagDroppedInFieldRed;
+    END
+
+    WINDOW
+      8817 40 80 32 32 USER;
+      STATUS = ENABLED+HIDDEN+IMAGE;
+      BACKGROUNDIMAGE = FlagAtHomeRed;
+      ENABLEDIMAGE = FlagCarriedRed;
+      DISABLEDIMAGE = FlagDroppedInFieldRed;
+    END
+
+    WINDOW
+      8818 40 120 32 32 USER;
+      STATUS = ENABLED+HIDDEN+IMAGE;
+      BACKGROUNDIMAGE = FlagAtHomeRed;
+      ENABLEDIMAGE = FlagCarriedRed;
+      DISABLEDIMAGE = FlagDroppedInFieldRed;
+    END
+
+    WINDOW
+      8819 0 160 32 32 USER;
+      STATUS = ENABLED+HIDDEN+IMAGE;
+      BACKGROUNDIMAGE = FlagAtHomeRed;
+      ENABLEDIMAGE = FlagCarriedRed;
+      DISABLEDIMAGE = FlagDroppedInFieldRed;
+    END
+
+    WINDOW
+      8820 0 200 32 32 USER;
+      STATUS = ENABLED+HIDDEN+IMAGE;
+      BACKGROUNDIMAGE = FlagAtHomeRed;
+      ENABLEDIMAGE = FlagCarriedRed;
+      DISABLEDIMAGE = FlagDroppedInFieldRed;
+    END
+
+    WINDOW
+      8821 0 240 32 32 USER;
+      STATUS = ENABLED+HIDDEN+IMAGE;
+      BACKGROUNDIMAGE = FlagAtHomeRed;
+      ENABLEDIMAGE = FlagCarriedRed;
+      DISABLEDIMAGE = FlagDroppedInFieldRed;
+    END
+
+    WINDOW
+      8822 0 280 32 32 USER;
+      STATUS = ENABLED+HIDDEN+IMAGE;
+      BACKGROUNDIMAGE = FlagAtHomeRed;
+      ENABLEDIMAGE = FlagCarriedRed;
+      DISABLEDIMAGE = FlagDroppedInFieldRed;
+    END
+
+    WINDOW
+      8823 40 160 32 32 USER;
+      STATUS = ENABLED+HIDDEN+IMAGE;
+      BACKGROUNDIMAGE = FlagAtHomeRed;
+      ENABLEDIMAGE = FlagCarriedRed;
+      DISABLEDIMAGE = FlagDroppedInFieldRed;
+    END
+
+    WINDOW
+      8824 40 200 32 32 USER;
+      STATUS = ENABLED+HIDDEN+IMAGE;
+      BACKGROUNDIMAGE = FlagAtHomeRed;
+      ENABLEDIMAGE = FlagCarriedRed;
+      DISABLEDIMAGE = FlagDroppedInFieldRed;
+    END
+
+    WINDOW
+      8825 40 240 32 32 USER;
+      STATUS = ENABLED+HIDDEN+IMAGE;
+      BACKGROUNDIMAGE = FlagAtHomeRed;
+      ENABLEDIMAGE = FlagCarriedRed;
+      DISABLEDIMAGE = FlagDroppedInFieldRed;
+    END
+
+    WINDOW
+      8826 40 280 32 32 USER;
+      STATUS = ENABLED+HIDDEN+IMAGE;
+      BACKGROUNDIMAGE = FlagAtHomeRed;
+      ENABLEDIMAGE = FlagCarriedRed;
+      DISABLEDIMAGE = FlagDroppedInFieldRed;
+    END
+  END
+END
+

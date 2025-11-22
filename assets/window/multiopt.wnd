@@ -1,0 +1,326 @@
+ENABLEDCOLOR = 255 0 0;
+HILITECOLOR = 255 192 192;
+DISABLEDCOLOR = 128 128 128;
+SELECTEDCOLOR = 255 128 128;
+TEXTCOLOR = 255 0 0;
+BACKGROUNDCOLOR = 0 0 0;
+
+WINDOW
+  500 0 0 640 480 USER;
+  STATUS = ENABLED;
+
+  CHILD
+    WINDOW
+      550 10 10 100 175 SCROLLLISTBOX (Map List);
+      STATUS = ENABLED;
+      TEXT = Multiopt.wnd:Maps;
+      TEXTCOLOR = 255 255 255;
+      DATA = 200 10 0 0 0 0 0;
+    END
+
+    WINDOW
+      551 110 20 10 15 PUSHBUTTON;
+      STATUS = ENABLED;
+      STYLE = MOUSETRACK;
+      TEXT = WindowDir:Up;
+    END
+
+    WINDOW
+      552 110 35 10 15 PUSHBUTTON;
+      STATUS = ENABLED;
+      STYLE = MOUSETRACK;
+      TEXT = WindowDir:Down;
+    END
+
+    WINDOW
+      553 130 10 260 175 SCROLLLISTBOX (Map Info);
+      STATUS = ENABLED;
+      TEXT = Multiopt.wnd:MapInfo;
+      TEXTCOLOR = 255 255 255;
+      DATA = 200 10 0 0 0 0 0;
+    END
+
+    WINDOW
+      554 390 20 10 15 PUSHBUTTON;
+      STATUS = ENABLED;
+      STYLE = MOUSETRACK;
+      TEXT = WindowDir:Up;
+    END
+
+    WINDOW
+      555 390 35 10 15 PUSHBUTTON;
+      STATUS = ENABLED;
+      STYLE = MOUSETRACK;
+      TEXT = WindowDir:Down;
+    END
+
+    WINDOW
+      575 410 30 60 10 STATICTEXT;
+      STATUS = DISABLED;
+      ENABLEDCOLOR = 0 0 0;
+      DISABLEDCOLOR = 0 0 0;
+      HILITECOLOR = 0 0 0;
+      TEXTCOLOR = 255 255 255;
+      DATA = 0 0 Multiopt.wnd:GameType;
+    END
+
+    WINDOW
+      576 530 30 60 10 STATICTEXT;
+      STATUS = DISABLED;
+      ENABLEDCOLOR = 0 0 0;
+      DISABLEDCOLOR = 0 0 0;
+      HILITECOLOR = 0 0 0;
+      TEXTCOLOR = 255 255 255;
+      DATA = 0 0 Multiopt.wnd:Allow;
+    END
+
+    WINDOW
+      577 590 30 60 10 STATICTEXT;
+      STATUS = DISABLED;
+      ENABLEDCOLOR = 0 0 0;
+      DISABLEDCOLOR = 0 0 0;
+      HILITECOLOR = 0 0 0;
+      TEXTCOLOR = 255 255 255;
+      DATA = 0 0 Multiopt.wnd:Respawn;
+    END
+
+	WINDOW
+	  578 410 10 220 12 PUSHBUTTON (Option selector);
+	  STATUS = ENABLED;
+	  GROUP = 2;
+	  STYLE = MOUSETRACK;
+      TEXTCOLOR = 255 255 255;
+	  TEXT = Multiopt.wnd:ShowServerOptions;
+	END
+
+	WINDOW
+	  560 410 40 100 15 RADIOBUTTON (Game type radios);
+	  STATUS = ENABLED;
+	  GROUP = 1;
+	  STYLE = MOUSETRACK;
+	  TEXT = Multiopt.wnd:Deathmatch;
+	END
+
+	WINDOW
+	  561 410 60 100 15 RADIOBUTTON;
+	  STATUS = ENABLED;
+	  GROUP = 1;
+	  STYLE = MOUSETRACK;
+	  TEXT = Multiopt.wnd:Cooperative;
+	END
+
+	WINDOW
+	  562 410 80 100 15 RADIOBUTTON;
+	  STATUS = ENABLED;
+	  GROUP = 1;
+	  STYLE = MOUSETRACK;
+	  TEXT = Multiopt.wnd:CaptureTheFlag;
+	END
+
+	WINDOW
+	  563 410 100 100 15 RADIOBUTTON;
+	  STATUS = ENABLED;
+	  GROUP = 1;
+	  STYLE = MOUSETRACK;
+	  TEXT = Multiopt.wnd:HotPotato;
+	END
+
+	WINDOW
+	  564 410 120 100 15 RADIOBUTTON;
+	  STATUS = ENABLED;
+	  GROUP = 1;
+	  STYLE = MOUSETRACK;
+	  TEXT = Multiopt.wnd:KingOfTheHill;
+	END
+
+	WINDOW
+	  565 410 140 100 15 RADIOBUTTON;
+	  STATUS = ENABLED;
+	  GROUP = 1;
+	  STYLE = MOUSETRACK;
+	  TEXT = Multiopt.wnd:ScavengerHunt;
+	END
+
+	WINDOW
+	  566 530 40 60 15 CHECKBOX (Object Options);
+      STATUS = ENABLED;
+	  TEXT = Multiopt.wnd:Weapons;
+	END
+
+	WINDOW
+	  567 530 60 60 15 CHECKBOX (Object Options);
+      STATUS = ENABLED;
+	  TEXT = Multiopt.wnd:Wands;
+	END
+
+	WINDOW
+	  568 530 80 60 15 CHECKBOX (Object Options);
+      STATUS = ENABLED;
+	  TEXT = Multiopt.wnd:Monsters;
+	END
+
+	WINDOW
+	  569 600 40 15 15 CHECKBOX (Respawn weapons);
+      STATUS = ENABLED;
+	END
+
+	WINDOW
+	  570 600 60 15 15 CHECKBOX (Respawn wands);
+      STATUS = ENABLED;
+	END
+
+	WINDOW
+	  571 600 80 15 15 CHECKBOX (Respawn monsters);
+      STATUS = ENABLED;
+	END
+
+    WINDOW
+  	  572 530 120 100 15 ENTRYFIELD (Max players entry);
+	  STATUS = ENABLED;
+	  TEXT = Multiopt.wnd:MaxPlayers;
+	  DATA = 3;
+	END
+
+    WINDOW
+  	  573 530 140 100 15 ENTRYFIELD (Kill limit entry);
+	  STATUS = ENABLED;
+	  TEXT = Multiopt.wnd:FragLimit;
+	  DATA = 4;
+	END
+
+    WINDOW
+  	  574 530 160 100 15 ENTRYFIELD (Time limit entry);
+	  STATUS = ENABLED;
+	  TEXT = Multiopt.wnd:TimeLimit;
+	  DATA = 4;
+	END
+
+	WINDOW
+	  580 410 30 160 15 CHECKBOX (Server Options);
+      STATUS = ENABLED;
+	  TEXT = Multiopt.wnd:AdvanceLevels;
+	END
+
+	WINDOW
+	  581 410 50 160 15 CHECKBOX (Server Options);
+      STATUS = ENABLED;
+	  TEXT = Multiopt.wnd:ApplyLag;
+	END
+
+	WINDOW
+	  582 410 70 160 15 CHECKBOX (Server Options);
+      STATUS = ENABLED;
+	  TEXT = Multiopt.wnd:AllowJoining;
+	END
+
+	WINDOW
+	  583 410 90 160 15 CHECKBOX (Teams allowed);
+      STATUS = ENABLED;
+	  TEXT = Multiopt.wnd:TeamsAllowed;
+	END
+
+	WINDOW
+	  584 410 110 160 15 CHECKBOX (Server Options);
+      STATUS = ENABLED;
+	  TEXT = Multiopt.wnd:AllowEdits;
+	END
+
+	WINDOW
+	  585 410 130 160 15 CHECKBOX (Server Options);
+      STATUS = ENABLED;
+	  TEXT = Multiopt.wnd:RunAsDedicated;
+	END
+
+	WINDOW
+	  586 410 150 160 15 CHECKBOX (Server Options);
+      STATUS = ENABLED;
+	  TEXT = Multiopt.wnd:LogServer;
+	END
+
+    WINDOW
+      511 10 450 120 20 PUSHBUTTON;
+      STATUS = ENABLED;
+	  STYLE = MOUSETRACK;
+	  TEXT = Multiopt.wnd:Rules;
+	END
+
+    WINDOW
+      512 140 450 120 20 PUSHBUTTON;
+      STATUS = ENABLED;
+	  STYLE = MOUSETRACK;
+	  TEXT = Multiopt.wnd:PlayerOptions;
+	END
+
+    WINDOW
+      513 270 450 120 20 PUSHBUTTON;
+      STATUS = ENABLED;
+	  STYLE = MOUSETRACK;
+	  TEXT = Multiopt.wnd:EditCharacter;
+	END
+
+    WINDOW
+      514 460 450 80 20 PUSHBUTTON;
+      STATUS = ENABLED;
+	  STYLE = MOUSETRACK;
+	  TEXT = WindowDir:Back;
+	END
+
+    WINDOW
+      515 550 450 80 20 PUSHBUTTON;
+      STATUS = ENABLED;
+	  STYLE = MOUSETRACK;
+	  TEXT = Multiopt.wnd:Start;
+	END
+
+    WINDOW
+  	  501 10 210 480 210 SCROLLLISTBOX (Chat listbox);
+	  STATUS = ENABLED;
+	  DISABLEDCOLOR = 0 0 0;
+	  DATA = 20 10 1 1 0 0 0;
+	END
+
+    WINDOW
+      502 490 210 10 15 PUSHBUTTON;
+      STATUS = ENABLED;
+	  STYLE = MOUSETRACK;
+	  TEXT = WindowDir:Up;
+	END
+
+    WINDOW
+      503 490 225 10 15 PUSHBUTTON;
+      STATUS = ENABLED;
+	  STYLE = MOUSETRACK;
+	  TEXT = WindowDir:Down;
+	END
+
+    WINDOW
+  	  504 10 420 400 20 ENTRYFIELD (Chat entry);
+	  STATUS = ENABLED;
+	  DATA = 256;
+	END
+
+    WINDOW
+      505 410 420 80 20 PUSHBUTTON;
+      STATUS = ENABLED;
+	  STYLE = MOUSETRACK;
+	  TEXT = Multiopt.wnd:Send;
+	END
+
+    WINDOW
+  	  540 510 200 120 220 SCROLLLISTBOX (Player List);
+	  STATUS = ENABLED;
+	  TEXT = Multiopt.wnd:PlayerList;
+      TEXTCOLOR = 255 255 255;
+	  DATA = 32 10 0 0 1 0 0;
+	END
+
+    WINDOW
+      543 510 420 120 20 PUSHBUTTON (Boot button);
+      STATUS = ENABLED;
+	  STYLE = MOUSETRACK;
+	  TEXT = Multiopt.wnd:BootPlayer;
+	END
+
+  END
+END
+

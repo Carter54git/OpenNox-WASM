@@ -1,0 +1,872 @@
+ENABLEDCOLOR = 0 150 0;
+HILITECOLOR = 0 200 0;
+DISABLEDCOLOR = 128 128 128;
+SELECTEDCOLOR = 230 128 128;
+TEXTCOLOR = 240 180 42;
+BACKGROUNDCOLOR = 0 0 0;
+
+WINDOW
+  10000 0 0 640 480 USER;
+  STATUS = ENABLED+IMAGE+ABOVE+NOFOCUS;
+  BACKGROUNDIMAGE = NoxWorldBkg;
+  CHILD
+
+    WINDOW
+      10033 0 0 130 120 USER (Master Game Description);
+      STATUS = ENABLED+ABOVE+BORDER+NOFOCUS;
+      STYLE = MOUSETRACK;
+      DATA = 64 10 0 1 0 0;
+
+      CHILD
+
+        WINDOW
+          10058 0 0 116 90 USER;
+          STATUS = BORDER+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+        END
+
+        WINDOW
+          10034 0 0 120 90 SCROLLLISTBOX (Game Description);
+          STATUS = ABOVE+NOFOCUS;
+          DATA = 512 10 0 0 0 0 0;
+          TEXTCOLOR = 255 255 255;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          FONT = default;
+        END
+
+        WINDOW
+          10035 120 0 10 15 PUSHBUTTON (Up);
+          STATUS = ENABLED+IMAGE+NOFOCUS;
+          STYLE = MOUSETRACK;
+          BACKGROUNDIMAGE = UIScrollUp;
+          SELECTEDIMAGE = UIScrollUpLit;
+          DISABLEDIMAGE = UIScrollUpDis;
+          HILITEIMAGE = UIScrollUpLit;
+          ENABLEDIMAGE = NULL;
+        END
+
+        WINDOW
+          10036 120 75 10 15 PUSHBUTTON (Down);
+          STATUS = ENABLED+IMAGE+NOFOCUS;
+          STYLE = MOUSETRACK;
+          BACKGROUNDIMAGE = UIScrollDn;
+          SELECTEDIMAGE = UIScrollDnLit;
+          DISABLEDIMAGE = UIScrollUpDis;
+          HILITEIMAGE = UIScrollDnLit;
+          ENABLEDIMAGE = NULL;
+        END
+
+        WINDOW
+          10032 121 15 16 60 VERTSLIDER (slider);
+          STATUS = ENABLED+IMAGE+NOFOCUS;
+          ENABLEDIMAGE = UISlider;
+          HILITEIMAGE = UISliderLit;
+          SELECTEDIMAGE = UISliderLit;
+          BACKGROUNDIMAGE = NULL;
+          DATA = 0 256;
+        END
+
+        WINDOW
+          10001 35 95 55 20 PUSHBUTTON (Join game);
+          STATUS = ENABLED+IMAGE+NOFOCUS;
+          STYLE = MOUSETRACK;
+          SELECTEDIMAGE = UIButtonMedLit;
+          HILITEIMAGE = UIButtonMedLit;
+          BACKGROUNDIMAGE = UIButtonMed;
+          ENABLEDIMAGE = NULL;
+          DISABLEDIMAGE = UIButtonMedDis;
+          IMAGEOFFSET = 0 -1;
+          TEXT = Noxworld.wnd:Join;
+        END
+      END
+    END
+
+    WINDOW
+      10046 0 0 0 0 USER;
+      STATUS = BELOW+NOINPUT+NOFOCUS;
+    END
+
+    WINDOW
+      10002 40 49 150 32 PUSHBUTTON (Host Game);
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      BACKGROUNDIMAGE = NULL;
+      SELECTEDIMAGE = NoxWorldMapButton1;
+      ENABLEDIMAGE = NULL;
+      HILITEIMAGE = NoxWorldMapButton1;
+      DISABLEDIMAGE = NoxWorldMapButton1Dis;
+      TEXT = Noxworld.wnd:Host;
+    END
+
+    WINDOW
+      10003 40 109 150 32 PUSHBUTTON (Host Quest, used to be Map Mode button);
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      BACKGROUNDIMAGE = ButtonHostQuestUnlit;
+      SELECTEDIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+      HILITEIMAGE = ButtonHostQuestLit;
+      DISABLEDIMAGE = NULL;
+      TEXT = Noxworld.wnd:HostQuest;
+    END
+
+    WINDOW
+      10004 40 169 150 32 RADIOBUTTON (List Mode);
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      BACKGROUNDIMAGE = NULL;
+      SELECTEDIMAGE = NoxWorldMapButton3Dis;
+      ENABLEDIMAGE = NULL;
+      HILITEIMAGE = NoxWorldMapButton3;
+      DISABLEDIMAGE = NULL;
+      TEXT = Noxworld.wnd:List;
+      GROUP = 3;
+      DATA = 1;
+    END
+
+    WINDOW
+      10005 40 229 150 32 RADIOBUTTON (Filters);
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      BACKGROUNDIMAGE = NULL;
+      SELECTEDIMAGE = NoxWorldMapButton4Dis;
+      ENABLEDIMAGE = NULL;
+      HILITEIMAGE = NoxWorldMapButton4;
+      DISABLEDIMAGE = NULL;
+      TEXT = Noxworld.wnd:Filters;
+      GROUP = 3;
+      DATA = 1;
+    END
+
+    WINDOW
+      10006 40 288 150 32 PUSHBUTTON (Refresh);
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      BACKGROUNDIMAGE = NULL;
+      SELECTEDIMAGE = NoxWorldMapButton5;
+      ENABLEDIMAGE = NULL;
+      HILITEIMAGE = NoxWorldMapButton5;
+      DISABLEDIMAGE = NoxWorldMapButton5Dis;
+      TEXT = Noxworld.wnd:Refresh;
+    END
+
+    WINDOW
+      10007 40 349 150 32 PUSHBUTTON (Find);
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      BACKGROUNDIMAGE = NULL;
+      SELECTEDIMAGE = NoxWorldMapButton6;
+      ENABLEDIMAGE = NULL;
+      HILITEIMAGE = NoxWorldMapButton6;
+      DISABLEDIMAGE = NoxWorldMapButton6Dis;
+      TEXT = Noxworld.wnd:Find;
+    END
+
+    WINDOW
+      10011 0 430 220 40 STATICTEXT;
+      STATUS = ENABLED+ABOVE+NOFOCUS;
+      ENABLEDCOLOR = TRANSPARENT;
+      DISABLEDCOLOR = TRANSPARENT;
+      HILITECOLOR = TRANSPARENT;
+      TEXTCOLOR = 240 180 42;
+      BACKGROUNDCOLOR = TRANSPARENT;
+      DATA = 1 0 Noxworld.wnd:Empty;
+      FONT = default;
+    END
+
+    WINDOW
+      10010 40 408 150 32 PUSHBUTTON (Back);
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      BACKGROUNDIMAGE = NULL;
+      SELECTEDIMAGE = NoxWorldMapButton7;
+      ENABLEDIMAGE = NULL;
+      HILITEIMAGE = NoxWorldMapButton7;
+      DISABLEDIMAGE = NULL;
+      TEXT = Noxworld.wnd:Back;
+    END
+
+    WINDOW
+      10020 216 27 384 424 USER;
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      BACKGROUNDIMAGE = NoxWorldMap;
+      ENABLEDCOLOR = TRANSPARENT;
+      DISABLEDCOLOR = TRANSPARENT;
+      HILITECOLOR = TRANSPARENT;
+      IMAGEOFFSET = 0 0;
+
+      CHILD
+        WINDOW
+          10600 48 28 100 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:LandDead;
+          FONT = default;
+        END
+
+        WINDOW
+          10601 188 57 100 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:GrokkTorr;
+          FONT = default;
+        END
+
+        WINDOW
+          10602 72 95 100 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:Wastelands;
+          FONT = default;
+        END
+
+        WINDOW
+          10603 202 100 35 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:HamletBrin;
+          FONT = default;
+        END
+
+        WINDOW
+          10604 111 136 50 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:FieldValor;
+          FONT = default;
+        END
+
+        WINDOW
+          10605 58 218 100 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:DismalSwamp;
+          FONT = default;
+        END
+
+        WINDOW
+          10606 165 206 35 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:TempleIx;
+          FONT = default;
+        END
+
+        WINDOW
+          10607 135 264 100 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:VillageIx;
+          FONT = default;
+        END
+
+        WINDOW
+          10608 253 272 50 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:DunMir;
+          FONT = default;
+        END
+
+        WINDOW
+          10609 175 302 100 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:Crossroads;
+          FONT = default;
+        END
+
+        WINDOW
+          10610 114 308 100 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:Mines;
+          FONT = default;
+        END
+
+        WINDOW
+          10611 62 390 100 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:Galava;
+          FONT = default;
+        END
+
+        WINDOW
+          10620 124 53 150 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:LandDead;
+          FONT = large;
+        END
+
+        WINDOW
+          10624 87 86 100 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:GrokkTorr;
+          FONT = large;
+        END
+
+        WINDOW
+          10621 184 187 100 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:Wastelands;
+          FONT = large;
+        END
+
+        WINDOW
+          10625 20 198 50 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:HamletBrin;
+          FONT = large;
+        END
+
+        WINDOW
+          10622 265 273 80 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:FieldValor;
+          FONT = large;
+        END
+
+        WINDOW
+          10623 155 334 100 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:DismalSwamp;
+          FONT = large;
+        END
+
+        WINDOW
+          10628 215 13 100 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:TempleIx;
+          FONT = large;
+        END
+
+        WINDOW
+          10629 273 116 100 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:VillageIx;
+          FONT = large;
+        END
+
+        WINDOW
+          10626 130 90 100 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:DunMir;
+          FONT = large;
+        END
+
+        WINDOW
+          10627 10 188 100 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:Crossroads;
+          FONT = large;
+        END
+
+        WINDOW
+          10630 280 191 100 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:Mines;
+          FONT = large;
+        END
+
+        WINDOW
+          10631 157 352 100 15 STATICTEXT;
+          STATUS = ENABLED+ABOVE+NOFOCUS;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          DISABLEDCOLOR = TRANSPARENT;
+          ENABLEDCOLOR = TRANSPARENT;
+          HILITECOLOR = TRANSPARENT;
+          TEXTCOLOR = TRANSPARENT;
+          DATA = 1 0 Noxworld.wnd:Galava;
+          FONT = large;
+        END
+      END
+    END
+
+    WINDOW
+      10021 216 27 384 424 USER;
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      CHILD
+
+        WINDOW
+          10054 0 0 192 212 PUSHBUTTON (WorldMap UL);
+          STATUS = ENABLED+IMAGE+NOFOCUS;
+          BACKGROUNDIMAGE = NWMapUL;
+          SELECTEDIMAGE = NWMapULLit;
+          DISABLEDIMAGE = NULL;
+          HILITEIMAGE = NWMapULLit;
+          ENABLEDIMAGE = NULL;
+          CHILD
+
+            WINDOW
+              10600 48 28 100 15 STATICTEXT;
+              STATUS = ENABLED+ABOVE+NOFOCUS;
+              BACKGROUNDCOLOR = TRANSPARENT;
+              DISABLEDCOLOR = TRANSPARENT;
+              ENABLEDCOLOR = TRANSPARENT;
+              HILITECOLOR = TRANSPARENT;
+              TEXTCOLOR = TRANSPARENT;
+              DATA = 1 0 Noxworld.wnd:LandDead;
+              FONT = default;
+            END
+
+            WINDOW
+              10601 188 57 100 15 STATICTEXT;
+              STATUS = ENABLED+ABOVE+NOFOCUS;
+              BACKGROUNDCOLOR = TRANSPARENT;
+              DISABLEDCOLOR = TRANSPARENT;
+              ENABLEDCOLOR = TRANSPARENT;
+              HILITECOLOR = TRANSPARENT;
+              TEXTCOLOR = TRANSPARENT;
+              DATA = 1 0 Noxworld.wnd:GrokkTorr;
+              FONT = default;
+            END
+
+            WINDOW
+              10602 72 95 100 15 STATICTEXT;
+              STATUS = ENABLED+ABOVE+NOFOCUS;
+              BACKGROUNDCOLOR = TRANSPARENT;
+              DISABLEDCOLOR = TRANSPARENT;
+              ENABLEDCOLOR = TRANSPARENT;
+              HILITECOLOR = TRANSPARENT;
+              TEXTCOLOR = TRANSPARENT;
+              DATA = 1 0 Noxworld.wnd:Wastelands;
+              FONT = default;
+            END
+
+            WINDOW
+              10604 111 136 50 15 STATICTEXT;
+              STATUS = ENABLED+ABOVE+NOFOCUS;
+              BACKGROUNDCOLOR = TRANSPARENT;
+              DISABLEDCOLOR = TRANSPARENT;
+              ENABLEDCOLOR = TRANSPARENT;
+              HILITECOLOR = TRANSPARENT;
+              TEXTCOLOR = TRANSPARENT;
+              DATA = 1 0 Noxworld.wnd:FieldValor;
+              FONT = default;
+            END
+
+            WINDOW
+              10606 165 206 35 15 STATICTEXT;
+              STATUS = ENABLED+ABOVE+NOFOCUS;
+              BACKGROUNDCOLOR = TRANSPARENT;
+              DISABLEDCOLOR = TRANSPARENT;
+              ENABLEDCOLOR = TRANSPARENT;
+              HILITECOLOR = TRANSPARENT;
+              TEXTCOLOR = TRANSPARENT;
+              DATA = 1 0 Noxworld.wnd:TempleIx;
+              FONT = default;
+            END
+          END
+        END
+
+        WINDOW
+          10055 192 0 192 212 PUSHBUTTON (WorldMap UR);
+          STATUS = ENABLED+IMAGE+NOFOCUS;
+          BACKGROUNDIMAGE = NWMapUR;
+          SELECTEDIMAGE = NWMapURLit;
+          DISABLEDIMAGE = NULL;
+          HILITEIMAGE = NWMapURLit;
+          ENABLEDIMAGE = NULL;
+          CHILD
+            WINDOW
+              10603 10 100 35 15 STATICTEXT;
+              STATUS = ENABLED+ABOVE+NOFOCUS;
+              BACKGROUNDCOLOR = TRANSPARENT;
+              DISABLEDCOLOR = TRANSPARENT;
+              ENABLEDCOLOR = TRANSPARENT;
+              HILITECOLOR = TRANSPARENT;
+              TEXTCOLOR = TRANSPARENT;
+              DATA = 1 0 Noxworld.wnd:HamletBrin;
+              FONT = default;
+            END
+          END
+        END
+
+        WINDOW
+          10056  0 212 192 212 PUSHBUTTON (WorldMap LL);
+          STATUS = ENABLED+IMAGE+NOFOCUS;
+          BACKGROUNDIMAGE = NWMapLL;
+          SELECTEDIMAGE = NWMapLLLit;
+          DISABLEDIMAGE = NULL;
+          HILITEIMAGE = NWMapLLLit;
+          ENABLEDIMAGE = NULL;
+          CHILD
+            WINDOW
+              10605 58 6 100 15 STATICTEXT;
+              STATUS = ENABLED+ABOVE+NOFOCUS;
+              BACKGROUNDCOLOR = TRANSPARENT;
+              DISABLEDCOLOR = TRANSPARENT;
+              ENABLEDCOLOR = TRANSPARENT;
+              HILITECOLOR = TRANSPARENT;
+              TEXTCOLOR = TRANSPARENT;
+              DATA = 1 0 Noxworld.wnd:DismalSwamp;
+              FONT = default;
+            END
+
+            WINDOW
+              10607 135 52 100 15 STATICTEXT;
+              STATUS = ENABLED+ABOVE+NOFOCUS;
+              BACKGROUNDCOLOR = TRANSPARENT;
+              DISABLEDCOLOR = TRANSPARENT;
+              ENABLEDCOLOR = TRANSPARENT;
+              HILITECOLOR = TRANSPARENT;
+              TEXTCOLOR = TRANSPARENT;
+              DATA = 1 0 Noxworld.wnd:VillageIx;
+              FONT = default;
+            END
+
+            WINDOW
+              10609 175 90 100 15 STATICTEXT;
+              STATUS = ENABLED+ABOVE+NOFOCUS;
+              BACKGROUNDCOLOR = TRANSPARENT;
+              DISABLEDCOLOR = TRANSPARENT;
+              ENABLEDCOLOR = TRANSPARENT;
+              HILITECOLOR = TRANSPARENT;
+              TEXTCOLOR = TRANSPARENT;
+              DATA = 1 0 Noxworld.wnd:Crossroads;
+              FONT = default;
+            END
+
+            WINDOW
+              10610 114 94 100 15 STATICTEXT;
+              STATUS = ENABLED+ABOVE+NOFOCUS;
+              BACKGROUNDCOLOR = TRANSPARENT;
+              DISABLEDCOLOR = TRANSPARENT;
+              ENABLEDCOLOR = TRANSPARENT;
+              HILITECOLOR = TRANSPARENT;
+              TEXTCOLOR = TRANSPARENT;
+              DATA = 1 0 Noxworld.wnd:Mines;
+              FONT = default;
+            END
+
+            WINDOW
+              10611 62 178 100 15 STATICTEXT;
+              STATUS = ENABLED+ABOVE+NOFOCUS;
+              BACKGROUNDCOLOR = TRANSPARENT;
+              DISABLEDCOLOR = TRANSPARENT;
+              ENABLEDCOLOR = TRANSPARENT;
+              HILITECOLOR = TRANSPARENT;
+              TEXTCOLOR = TRANSPARENT;
+              DATA = 1 0 Noxworld.wnd:Galava;
+              FONT = default;
+            END
+          END
+        END
+
+        WINDOW
+          10057 192 212 192 212 PUSHBUTTON (WorldMap LR);
+          STATUS = ENABLED+IMAGE+NOFOCUS;
+          BACKGROUNDIMAGE = NWMapLR;
+          SELECTEDIMAGE = NWMapLRLit;
+          DISABLEDIMAGE = NULL;
+          HILITEIMAGE = NWMapLRLit;
+          ENABLEDIMAGE = NULL;
+          CHILD
+            WINDOW
+              10608 61 60 50 15 STATICTEXT;
+              STATUS = ENABLED+ABOVE+NOFOCUS;
+              BACKGROUNDCOLOR = TRANSPARENT;
+              DISABLEDCOLOR = TRANSPARENT;
+              ENABLEDCOLOR = TRANSPARENT;
+              HILITECOLOR = TRANSPARENT;
+              TEXTCOLOR = TRANSPARENT;
+              DATA = 1 0 Noxworld.wnd:DunMir;
+              FONT = default;
+            END
+          END
+        END
+      END
+    END
+
+    WINDOW
+      10037 220 53 413 400 SCROLLLISTBOX (Master Game List);
+      STATUS = ENABLED+NOFOCUS+ONE_LINE;
+      STYLE = MOUSETRACK;
+      DATA = 2500 10 0 0 0 0 0;
+      BACKGROUNDCOLOR = TRANSPARENT;
+      ENABLEDCOLOR = TRANSPARENT;
+      SELECTEDCOLOR = TRANSPARENT;
+      HILITECOLOR = TRANSPARENT;
+      FONT = default;
+      CHILD
+
+        WINDOW
+          10038 16 0 100 400 SCROLLLISTBOX (Game Name List);
+          STATUS = ENABLED+NOFOCUS+ONE_LINE;
+          DATA = 2500 10 0 0 0 0 0;
+          ENABLEDCOLOR = TRANSPARENT;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          TEXTCOLOR = 255 255 0;
+          SELECTEDCOLOR = 0 150 0;
+          HILITECOLOR = TRANSPARENT;
+          FONT = default;
+        END
+
+        WINDOW
+          10039 116 0 50 400 SCROLLLISTBOX (Occupancy List);
+          STATUS = ENABLED+NOFOCUS+ONE_LINE;
+          DATA = 2500 10 0 0 0 0 0;
+          ENABLEDCOLOR = TRANSPARENT;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          TEXTCOLOR = 255 255 0;
+          SELECTEDCOLOR = 0 150 0;
+          HILITECOLOR = TRANSPARENT;
+          FONT = default;
+        END
+
+        WINDOW
+          10040 166 0 75 400 SCROLLLISTBOX (GameType List);
+          STATUS = ENABLED+NOFOCUS+ONE_LINE;
+          DATA = 2500 10 0 0 0 0 0;
+          ENABLEDCOLOR = TRANSPARENT;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          TEXTCOLOR = 255 255 0;
+          HILITECOLOR = TRANSPARENT;
+          SELECTEDCOLOR = 0 150 0;
+          FONT = default;
+        END
+
+        WINDOW
+          10041 241 0 50 400 SCROLLLISTBOX (Ping List);
+          STATUS = ENABLED+NOFOCUS+ONE_LINE;
+          DATA = 2500 10 0 0 0 0 0;
+          ENABLEDCOLOR = TRANSPARENT;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          TEXTCOLOR = 255 255 0;
+          HILITECOLOR = TRANSPARENT;
+          SELECTEDCOLOR = 0 150 0;
+          FONT = default;
+        END
+
+        WINDOW
+          10042 291 0 90 400 SCROLLLISTBOX (Status List);
+          STATUS = ENABLED+NOFOCUS+ONE_LINE;
+          DATA = 2500 10 0 0 0 0 0;
+          ENABLEDCOLOR = TRANSPARENT;
+          BACKGROUNDCOLOR = TRANSPARENT;
+          TEXTCOLOR = 255 255 0;
+          SELECTEDCOLOR = 0 150 0;
+          HILITECOLOR = TRANSPARENT;
+          FONT = default;
+        END
+
+        WINDOW
+          10053 396 40 16 323 VERTSLIDER (slider);
+          STATUS = ENABLED+ABOVE+IMAGE+NOFOCUS;
+          STYLE = MOUSETRACK;
+          ENABLEDIMAGE = ShopInventorySlider;
+          HILITEIMAGE = ShopInventorySliderSelected;
+          SELECTEDIMAGE = ShopInventorySliderSelected;
+          BACKGROUNDIMAGE = NULL;
+          DATA = 0 350;
+        END
+
+        WINDOW
+          10043 393 0 20 25 PUSHBUTTON (up button);
+          STATUS = ENABLED+IMAGE+ABOVE+NOFOCUS;
+          STYLE = MOUSETRACK;
+          BACKGROUNDIMAGE = ShopInventoryUp;
+          SELECTEDIMAGE = ShopInventoryUpSelected;
+          DISABLEDIMAGE = NULL;
+          HILITEIMAGE = ShopInventoryUpSelected;
+          ENABLEDIMAGE = NULL;
+        END
+
+        WINDOW
+          10044 393 375 20 25 PUSHBUTTON (down button);
+          STYLE = MOUSETRACK;
+          STATUS = ENABLED+IMAGE+ABOVE+NOFOCUS;
+          BACKGROUNDIMAGE = ShopInventoryDown;
+          SELECTEDIMAGE = ShopInventoryDownSelected;
+          DISABLEDIMAGE = NULL;
+          HILITEIMAGE = ShopInventoryDownSelected;
+          ENABLEDIMAGE = NULL;
+        END
+
+        WINDOW
+          10045 389 8 17 382 USER;
+          STATUS = IMAGE+NOINPUT+NOFOCUS+ABOVE;
+          BACKGROUNDIMAGE = NoxWorldMapButton8;
+        END
+      END
+    END
+
+    WINDOW
+      10047 236 30 55 20 PUSHBUTTON (Name Sort Button);
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      SELECTEDIMAGE = UIButtonMedLit;
+      HILITEIMAGE = UIButtonMedLit;
+      BACKGROUNDIMAGE = UIButtonMed;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+      IMAGEOFFSET = 0 -1;
+      TEXT = Noxworld.wnd:Name;
+      FONT = default;
+    END
+
+    WINDOW
+      10048 323 30 55 20 PUSHBUTTON (Occupancy Sort Button);
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      SELECTEDIMAGE = UIButtonMedLit;
+      HILITEIMAGE = UIButtonMedLit;
+      BACKGROUNDIMAGE = UIButtonMed;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+      IMAGEOFFSET = 0 -1;
+      TEXT = Players.wnd:Players;
+      FONT = default;
+    END
+
+    WINDOW
+      10049 386 30 55 20 PUSHBUTTON (Gametype Sort Button);
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      SELECTEDIMAGE = UIButtonMedLit;
+      HILITEIMAGE = UIButtonMedLit;
+      BACKGROUNDIMAGE = UIButtonMed;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+      IMAGEOFFSET = 0 -1;
+      TEXT = Noxworld.wnd:GameType;
+      FONT = default;
+    END
+
+    WINDOW
+      10050 446 30 55 20 PUSHBUTTON (Ping Sort Button);
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+        SELECTEDIMAGE = UIButtonMedLit;
+      HILITEIMAGE = UIButtonMedLit;
+      BACKGROUNDIMAGE = UIButtonMed;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+      IMAGEOFFSET = 0 -1;
+      TEXT = Noxworld.wnd:Ping;
+      FONT = default;
+    END
+
+    WINDOW
+      10051 505 30 55 20 PUSHBUTTON (Status Sort Button);
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      SELECTEDIMAGE = UIButtonMedLit;
+      HILITEIMAGE = UIButtonMedLit;
+      BACKGROUNDIMAGE = UIButtonMed;
+      ENABLEDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+      IMAGEOFFSET = 0 -1;
+      TEXT = Noxworld.wnd:Status;
+      FONT = default;
+    END
+  END
+END
+

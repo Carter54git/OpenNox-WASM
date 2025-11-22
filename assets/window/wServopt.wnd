@@ -1,0 +1,473 @@
+ENABLEDCOLOR = 230 165 65;
+HILITECOLOR = 230 192 192;
+DISABLEDCOLOR = 50 50 50;
+SELECTEDCOLOR = 230 165 65;
+TEXTCOLOR = 230 165 65;
+BACKGROUNDCOLOR = TRANSPARENT;
+
+WINDOW
+  10100 400 0 230 400 USER;
+  STATUS = ENABLED+ABOVE+NOFOCUS;
+  
+  CHILD
+	WINDOW
+	  10150 10 10 220 365 USER (Game);
+	  STATUS = ENABLED+BELOW+NOFOCUS;
+
+	  CHILD
+		WINDOW
+		  10153 0 0 230 360 USER (General Opts);
+		  STATUS = ENABLED+BELOW+NOFOCUS;		  
+		  CHILD
+			WINDOW
+			  10101 15 20 175 20 ENTRYFIELD (Server Name);
+			  STYLE = MOUSETRACK;
+			  STATUS = ENABLED;
+			  TEXT = servopts.wnd:ServerName;
+			  DATA = 16 130 0 3;
+			  TOOLTIP = servopts.wnd:GameName;
+			END
+
+			WINDOW
+			  10183 10 50 190 110 SCROLLLISTBOX (Map List Parent);
+			  STATUS = ENABLED+BELOW+NOFOCUS;
+			  HILITECOLOR = TRANSPARENT;
+			  DISABLEDCOLOR = TRANSPARENT;
+			  SELECTEDCOLOR = TRANSPARENT;
+			  ENABLEDCOLOR = 230 165 65;
+			  DATA = 1 10 0 0 0 0 0;
+			  CHILD		
+				WINDOW
+				  10117 10 2 170 10 STATICTEXT (SelectMapMsg);
+				  STATUS = ENABLED+NOFOCUS;
+				  HILITECOLOR = TRANSPARENT;
+				  DISABLEDCOLOR = TRANSPARENT;
+				  SELECTEDCOLOR = TRANSPARENT;
+				  ENABLEDCOLOR = TRANSPARENT;
+				  TEXTCOLOR = 0 255 0;
+				  DATA = 1 0 Servopts.wnd:Empty;				  
+				END
+
+				WINDOW
+				  10110 10 12 170 10 STATICTEXT (NumTeamsMsg);
+				  STATUS = ENABLED+NOFOCUS;
+				  HILITECOLOR = TRANSPARENT;
+				  DISABLEDCOLOR = TRANSPARENT;
+				  SELECTEDCOLOR = TRANSPARENT;
+				  ENABLEDCOLOR = TRANSPARENT;
+				  TEXTCOLOR = 0 255 0;
+				  DATA = 1 0 Servopts.wnd:Empty;
+				  TOOLTIP = Servopts.wnd:TeamNumTT;
+				END
+
+
+				WINDOW
+				  10118 2 28 180 20 STATICTEXT (Current Game Type String);
+				  STATUS = ENABLED+NOFOCUS;
+				  HILITECOLOR = TRANSPARENT;
+				  DISABLEDCOLOR = TRANSPARENT;
+				  SELECTEDCOLOR = TRANSPARENT;
+				  ENABLEDCOLOR = TRANSPARENT;
+				  TEXTCOLOR = 0 255 0;
+				  DATA = 0 0 Servopts.wnd:Empty;				
+				END
+				
+				WINDOW
+				  10120 98 28 92 55 SCROLLLISTBOX (GameType list);
+				  STATUS = ENABLED+HIDDEN+ABOVE+NOFOCUS;
+				  STYLE = MOUSETRACK;
+				  HILITECOLOR = TRANSPARENT;
+				  DISABLEDCOLOR = TRANSPARENT;
+				  SELECTEDCOLOR = 0 0 150;
+				  BACKGROUNDCOLOR = 0 0 0;
+				  DATA = 10 10 0 1 0 0 0;
+				END
+					
+				WINDOW
+				  10119 92 28 95 20 PUSHBUTTON (GameType DropDown Button);
+				  STATUS = ENABLED+IMAGE;
+				  STYLE = MOUSETRACK;
+				  SELECTEDIMAGE = UIButtonXlgLit;
+				  HILITEIMAGE = UIButtonXlgLit;
+				  BACKGROUNDIMAGE = UIButtonXlg;
+				  ENABLEDIMAGE = NULL;
+				  DISABLEDIMAGE = UIButtonXlgDis;
+				  IMAGEOFFSET = 0 -1;
+				  TOOLTIP = Servopts.wnd:GameTypeTT;
+				END
+				
+				WINDOW
+				  10114 5 50 170 54 SCROLLLISTBOX (Map List);
+				  STATUS = ENABLED+NOFOCUS;
+				  STYLE = MOUSETRACK;
+				  HILITECOLOR = TRANSPARENT;
+				  DISABLEDCOLOR = TRANSPARENT;
+				  SELECTEDCOLOR = 0 0 150;
+				  DATA = 256 10 0 1 0 0 1;
+				END
+				  
+				WINDOW
+				  10182 175 65 16 25 VERTSLIDER (slider);
+				  STATUS = ENABLED+NOFOCUS;
+				  ENABLEDCOLOR = TRANSPARENT;
+				  HILITECOLOR = TRANSPARENT;
+				  SELECTEDCOLOR = TRANSPARENT;
+				  BACKGROUNDCOLOR = TRANSPARENT;
+				  DISABLEDCOLOR = TRANSPARENT;
+				  DATA = 0 256;
+				END
+
+				WINDOW
+				  10180 174 50 10 15 PUSHBUTTON (up button);
+				  STATUS = ENABLED+IMAGE+NOFOCUS;
+				  STYLE = MOUSETRACK;
+				  BACKGROUNDIMAGE = UIScrollUp;
+				  SELECTEDIMAGE = UIScrollUpLit;
+				  DISABLEDIMAGE = UIScrollUpDis;
+				  HILITEIMAGE = UIScrollUpLit;
+				  ENABLEDIMAGE = NULL;
+				END
+
+				WINDOW
+				  10181 175 90 10 15 PUSHBUTTON (down button);
+				  STATUS = ENABLED+IMAGE+NOFOCUS;
+				  STYLE = MOUSETRACK;
+				  BACKGROUNDIMAGE = UIScrollDn;
+				  SELECTEDIMAGE = UIScrollDnLit;
+				  DISABLEDIMAGE = UIScrollDnDis;
+				  HILITEIMAGE = UIScrollDnLit;
+				  ENABLEDIMAGE = NULL;
+				END
+			  END
+			END
+			
+			WINDOW
+			  10197 10 159 190 70 SCROLLLISTBOX (Settings parent);
+			  STATUS = ENABLED+BELOW+NOFOCUS;
+			  HILITECOLOR = TRANSPARENT;
+			  DISABLEDCOLOR = TRANSPARENT;
+			  SELECTEDCOLOR = TRANSPARENT;
+			  ENABLEDCOLOR = 230 165 65;
+			  DATA = 1 10 0 0 0 0 0;
+			  CHILD
+			    WINDOW
+				  10121 5 0 175 20 STATICTEXT (Game Setting String);
+				  STATUS = ENABLED+NOFOCUS;
+				  HILITECOLOR = TRANSPARENT;
+				  DISABLEDCOLOR = TRANSPARENT;
+				  SELECTEDCOLOR = TRANSPARENT;
+				  ENABLEDCOLOR = TRANSPARENT;
+				  TEXTCOLOR = 0 255 0;
+				  DATA = 1 0 Servopts.wnd:Empty;					
+				END
+
+				WINDOW
+				  10134 5 20 95 20 ENTRYFIELD (Lesson limit);
+				  STATUS = ENABLED;
+				  STYLE = MOUSETRACK;
+				  TEXT = Servopts.wnd:KillLimit;
+				  DATA = 4 95 0 1;
+				  TOOLTIP = Servopts.wnd:KillLimitTT;
+				END
+
+				WINDOW
+				  10135 5 45 95 20 ENTRYFIELD (Time limit);
+				  STATUS = ENABLED;
+				  STYLE = MOUSETRACK;
+				  TEXT = Servopts.wnd:TimeLimit;
+				  DATA = 4 80 0 1;
+				  TOOLTIP = Servopts.wnd:TimeLimitTT;
+				END
+		
+				WINDOW
+				  10152 100 20 80 20 PUSHBUTTON (Advanced);
+				  STATUS = ENABLED+IMAGE+ABOVE;
+				  STYLE = MOUSETRACK;
+				  SELECTEDIMAGE = UIButtonLgLit;
+				  HILITEIMAGE = UIButtonLgLit;
+				  BACKGROUNDIMAGE = UIButtonLg;
+				  ENABLEDIMAGE = NULL;
+				  DISABLEDIMAGE = UIButtonLgDis;
+				  IMAGEOFFSET = 5 -1;
+				  TEXT = servopts.wnd:Advanced;
+				  TOOLTIP = servopts.wnd:AdvancedTT;
+				END		
+
+				WINDOW
+				  10141 100 45 80 20 PUSHBUTTON;
+				  STATUS = ENABLED+IMAGE;
+				  STYLE = MOUSETRACK;
+				  SELECTEDIMAGE = UIButtonLgLit;
+				  HILITEIMAGE = UIButtonLgLit;
+				  BACKGROUNDIMAGE = UIButtonLg;
+				  ENABLEDIMAGE = NULL;
+				  DISABLEDIMAGE = UIButtonLgDis;
+				  IMAGEOFFSET = 5 -1;
+				  TEXT = servopts.wnd:Default;
+				  TOOLTIP = servopts.wnd:DefaultTT;
+				END	
+			  END
+			END
+			
+			WINDOW
+			  10122 40 335 150 20 CHECKBOX (new game checkbox);
+			  STATUS = ENABLED+IMAGE+NOFOCUS;
+			  STYLE = MOUSETRACK;
+			  SELECTEDIMAGE = UICheckBoxLit;
+			  HILITEIMAGE = NULL;
+			  BACKGROUNDIMAGE = UICheckBox;
+			  ENABLEDIMAGE = NULL;
+			  DISABLEDIMAGE = UICheckBoxDis;
+			  TEXT = Servopts.wnd:NewGame;
+			  FONT = large;
+			  TOOLTIP = servopts.wnd:NewGameTT;
+			END
+
+			WINDOW
+			  10198 10 294 190 40 SCROLLLISTBOX (Ladder parent);
+			  STATUS = BELOW+NOFOCUS;
+			  HILITECOLOR = TRANSPARENT;
+			  DISABLEDCOLOR = TRANSPARENT;
+			  SELECTEDCOLOR = TRANSPARENT;
+			  ENABLEDCOLOR = 230 165 65;
+			  DATA = 1 10 0 0 0 0 0;
+			  CHILD
+
+				WINDOW
+				  10137 50 0 150 20 CHECKBOX (Ladder Game);
+				  STATUS = ENABLED+IMAGE+NOFOCUS;
+				  STYLE = MOUSETRACK;
+				  SELECTEDIMAGE = UICheckBoxLit;
+				  HILITEIMAGE = NULL;
+				  BACKGROUNDIMAGE = UICheckBox;
+				  ENABLEDIMAGE = NULL;
+				  DISABLEDIMAGE = UICheckBoxDis;
+				  TEXT = Servopts.wnd:Ladder;
+				  TOOLTIP = servopts.wnd:LadderTT;
+				END
+					
+				WINDOW
+				  10138 10 20 80 10 RADIOBUTTON (Ladder Individual);
+				  STATUS = ENABLED+IMAGE+NOFOCUS;
+				  STYLE = MOUSETRACK;
+				  SELECTEDIMAGE = UIRadioLit;
+				  HILITEIMAGE = NULL;
+				  BACKGROUNDIMAGE = UIRadio;
+				  ENABLEDIMAGE = NULL;
+				  DISABLEDIMAGE = UIRadioDis;
+				  TEXT = Servopts.wnd:Individual;
+				  IMAGEOFFSET = 0 -3;
+				  GROUP = 5;
+				  TOOLTIP = servopts.wnd:IndividualTT;
+				END
+
+				WINDOW
+				  10139 120 20 80 10 RADIOBUTTON (Ladder Clan);
+				  STATUS = ENABLED+IMAGE+NOFOCUS;
+				  STYLE = MOUSETRACK;
+				  SELECTEDIMAGE = UIRadioLit;
+				  HILITEIMAGE = NULL;
+				  BACKGROUNDIMAGE = UIRadio;
+				  ENABLEDIMAGE = NULL;
+				  DISABLEDIMAGE = UIRadioDis;
+				  TEXT = Servopts.wnd:Clan;
+				  IMAGEOFFSET = 0 -3;
+				  GROUP = 5;
+				  TOOLTIP = servopts.wnd:ClanTT;
+				END			
+			  END
+			END
+
+			WINDOW
+			  10199 10 228 190 67 SCROLLLISTBOX (Team parent);
+			  STATUS = BELOW+NOFOCUS;
+			  HILITECOLOR = TRANSPARENT;
+			  DISABLEDCOLOR = TRANSPARENT;
+			  SELECTEDCOLOR = TRANSPARENT;
+			  ENABLEDCOLOR = 230 165 65;
+			  DATA = 1 10 0 0 0 0 0;
+			  CHILD
+			    WINDOW
+				  10330 50 2 95 20 CHECKBOX (Use Teams);
+				  STATUS = ENABLED+IMAGE+NOFOCUS;
+				  STYLE = MOUSETRACK;
+				  SELECTEDIMAGE = UIButtonXlgLit;
+				  HILITEIMAGE = NULL;
+				  BACKGROUNDIMAGE = UIButtonXlg;
+				  ENABLEDIMAGE = NULL;
+				  DISABLEDIMAGE = UIButtonXlgDis;
+				  IMAGEOFFSET = -5 -5;
+				  TOOLTIP = Servopts.wnd:UseTeamsTT;
+				  TEXT = servopts.wnd:UseTeams;
+				END
+
+				WINDOW
+				  10331 2 25 70 15 CHECKBOX (AutoAssign);
+				  STATUS = ENABLED+IMAGE+NOFOCUS;
+				  STYLE = MOUSETRACK;
+				  SELECTEDIMAGE = UICheckBoxLit;
+				  HILITEIMAGE = NULL;
+				  BACKGROUNDIMAGE = UICheckBox;
+				  ENABLEDIMAGE = NULL;
+				  DISABLEDIMAGE = UICheckBoxDis;
+				  TEXT = Servopts.wnd:AutoAssign;					
+				END
+
+				WINDOW
+				  10333 100 25 70 15 CHECKBOX (Team Damage);
+				  STATUS = ENABLED+IMAGE+NOFOCUS;
+				  STYLE = MOUSETRACK;
+				  SELECTEDIMAGE = UICheckBoxLit;
+				  HILITEIMAGE = NULL;
+				  BACKGROUNDIMAGE = UICheckBox;
+  				  ENABLEDIMAGE = NULL;
+				  DISABLEDIMAGE = UICheckBoxDis;
+				  TEXT = Servopts.wnd:TeamDamage;
+				END
+
+				WINDOW
+				  10332 70 43 55 20 PUSHBUTTON (Shuffle);
+				  STATUS = ENABLED+IMAGE+ABOVE+NOFOCUS;
+				  STYLE = MOUSETRACK;
+				  SELECTEDIMAGE = UIButtonMedLit;
+				  HILITEIMAGE = UIButtonMedLit;
+				  BACKGROUNDIMAGE = UIButtonMed;
+				  ENABLEDIMAGE = NULL;
+				  DISABLEDIMAGE = UIButtonMedDis;
+				  IMAGEOFFSET = 0 -1;
+				  TEXT = servopts.wnd:Shuffle;
+				  TOOLTIP = Servopts.wnd:ShuffleTT;
+				END				  
+			  END
+			END			  
+		  END
+		END			
+	  END
+	END	
+
+	WINDOW
+	  10162 130 27 95 20 RADIOBUTTON (Players Tab);
+	  STATUS = ENABLED+IMAGE+HIDDEN+NOFOCUS;
+	  STYLE = MOUSETRACK;
+	  SELECTEDIMAGE = UITabs1;
+	  HILITEIMAGE = NULL;
+	  BACKGROUNDIMAGE = UITabs2;
+	  ENABLEDIMAGE = NULL;
+	  DISABLEDIMAGE = NULL;
+	  TEXT = servopts.wnd:Teams;
+	  DATA = 1;	  
+	  GROUP = 6;
+	  TOOLTIP = Servopts.wnd:TeamTT;
+	END
+
+	WINDOW
+	  10161 70 27 95 20 RADIOBUTTON (Access Tab);
+	  STATUS = ENABLED+IMAGE+HIDDEN+NOFOCUS;
+	  STYLE = MOUSETRACK;
+	  SELECTEDIMAGE = UITabs1;
+	  HILITEIMAGE = NULL;
+	  BACKGROUNDIMAGE = UITabs2;
+	  ENABLEDIMAGE = NULL;
+	  DISABLEDIMAGE = UITabs2;
+	  TEXT = servopts.wnd:Access;
+	  DATA = 1;
+	  GROUP = 6;	  
+	  TOOLTIP = Servopts.wnd:AccessTT;
+	END
+
+	WINDOW
+	  10163 10 27 95 20 RADIOBUTTON (General Tab);
+	  STATUS = ENABLED+IMAGE+HIDDEN+NOFOCUS;
+	  STYLE = MOUSETRACK;
+	  SELECTEDIMAGE = UITabs1;
+	  HILITEIMAGE = NULL;
+	  BACKGROUNDIMAGE = UITabs3;
+	  ENABLEDIMAGE = NULL;
+	  DISABLEDIMAGE = UITabs3;
+	  TEXT = servopts.wnd:General;
+	  DATA = 1;
+	  GROUP = 6;	  
+	  TOOLTIP = Servopts.wnd:GeneralTT;	  
+	END
+	
+    WINDOW
+      10196 10 50 210 310 USER (Game Border);
+      STATUS = BORDER+HIDDEN+NOFOCUS;
+    END
+
+	WINDOW
+	  10160 20 0 95 20 RADIOBUTTON (Game Tab);
+	  STATUS = ENABLED+IMAGE;
+	  STYLE = MOUSETRACK;
+	  SELECTEDIMAGE = UITabs1;
+	  HILITEIMAGE = NULL;
+	  BACKGROUNDIMAGE = UITabs3;
+	  ENABLEDIMAGE = NULL;
+	  DISABLEDIMAGE = NULL;
+	  TEXT = servopts.wnd:Game;
+	  DATA = 1;	  
+	  GROUP = 3;
+	  TOOLTIP = Servopts.wnd:GameTT;
+	END
+
+	WINDOW
+	  10159 80 0 95 20 RADIOBUTTON (Server Tab);
+	  STATUS = ENABLED+IMAGE;
+	  STYLE = MOUSETRACK;
+	  SELECTEDIMAGE = UITabs1;
+	  HILITEIMAGE = NULL;
+	  BACKGROUNDIMAGE = UITabs2;
+	  ENABLEDIMAGE = NULL;
+	  DISABLEDIMAGE = UITabs2;
+	  TEXT = servopts.wnd:Server;
+	  DATA = 1;
+	  GROUP = 3;	  
+	  TOOLTIP = Servopts.wnd:ServerTT;
+	END
+
+	WINDOW
+      10195 0 23 230 377 USER (Main Border);
+      STATUS = BORDER+NOFOCUS;
+    END
+
+	WINDOW
+	  10145 10 370 55 20 PUSHBUTTON;
+	  STATUS = ENABLED+IMAGE+ABOVE;
+	  STYLE = MOUSETRACK;
+	  SELECTEDIMAGE = UIButtonMedLit;
+	  HILITEIMAGE = UIButtonMedLit;
+	  BACKGROUNDIMAGE = UIButtonMed;
+	  ENABLEDIMAGE = NULL;
+	  DISABLEDIMAGE = UIButtonMedDis;
+	  IMAGEOFFSET = 0 -1;
+	  TEXT = servopts.wnd:Go;
+	  TOOLTIP = Servopts.wnd:GoTT;
+	END
+	
+	WINDOW
+	  10149 10 370 55 20 PUSHBUTTON;
+	  STATUS = ENABLED+IMAGE+ABOVE+HIDDEN+NOFOCUS;
+	  STYLE = MOUSETRACK;
+	  SELECTEDIMAGE = UIButtonMedLit;
+	  HILITEIMAGE = UIButtonMedLit;
+	  BACKGROUNDIMAGE = UIButtonMed;
+	  ENABLEDIMAGE = NULL;
+	  DISABLEDIMAGE = UIButtonMedDis;
+	  IMAGEOFFSET = 0 -1;
+	  TEXT = servopts.wnd:Ok;	  
+	END
+
+	WINDOW
+	  10146 93 370 55 20 PUSHBUTTON;
+	  STYLE = MOUSETRACK;
+	  STATUS = ENABLED+IMAGE+ABOVE;
+	  SELECTEDIMAGE = UIButtonMedLit;
+	  HILITEIMAGE = UIButtonMedLit;
+	  BACKGROUNDIMAGE = UIButtonMed;
+	  ENABLEDIMAGE = NULL;
+	  DISABLEDIMAGE = UIButtonMedDis;
+	  IMAGEOFFSET = 0 -1;
+	  TEXT = servopts.wnd:Cancel;
+	END				
+  END  
+END

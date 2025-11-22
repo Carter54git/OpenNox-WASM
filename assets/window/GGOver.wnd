@@ -1,0 +1,100 @@
+ENABLEDCOLOR = 128 128 128;
+HILITECOLOR = 128 128 128;
+DISABLEDCOLOR = 128 128 128;
+SELECTEDCOLOR = 240 180 42;
+TEXTCOLOR = 240 180 42;
+BACKGROUNDCOLOR = 0 0 0;
+FONT = large;
+
+WINDOW
+  10700 0 0 310 280 USER;
+  STATUS = ENABLED+ABOVE+BORDER+NOFOCUS;
+
+  CHILD
+
+    WINDOW
+      10703 20 20 280 0 STATICTEXT (Title);
+      STATUS = ENABLED+NOFOCUS;
+      DATA = 1 0 GGOver.wnd:GameOver;
+    END
+
+    WINDOW
+      10705 40 45 280 0 STATICTEXT (Consecutive stages);
+      STATUS = ENABLED+NOFOCUS;
+      DATA = 0 0 GGOver.wnd:ConsecutiveStages;
+    END
+
+    WINDOW
+      10710 40 65 280 0 STATICTEXT (Generators);
+      STATUS = ENABLED+NOFOCUS;
+      DATA = 0 0 GGOver.wnd:GeneratorsDestroyed;
+    END
+
+    WINDOW
+      10707 40 85 280 0 STATICTEXT (Secrets found);
+      STATUS = ENABLED+NOFOCUS;
+      DATA = 0 0 GGOver.wnd:NumSecretsFound;
+    END
+
+    WINDOW
+      10708 40 105 280 0 STATICTEXT (Kills);
+      STATUS = ENABLED+NOFOCUS;
+      DATA = 0 0 GGOver.wnd:Kills;
+    END
+
+    WINDOW
+      10706 40 125 280 0 STATICTEXT (High stage);
+      STATUS = ENABLED+NOFOCUS;
+      DATA = 0 0 GGOver.wnd:HighStage;
+    END
+
+    WINDOW
+      10711 40 145 280 0 STATICTEXT (Total Score);
+      STATUS = ENABLED+NOFOCUS+HIDDEN;
+      DATA = 0 0 GUIBrief.c:TotalScore;
+    END
+
+    WINDOW
+      10709 20 160 280 0 STATICTEXT (Continue or quit text);
+      STATUS = ENABLED+NOFOCUS;
+      DATA = 0 0 GeneralPrint:MiscQuestionQDeath;
+    END
+
+    WINDOW
+      10702 70 245 55 20 PUSHBUTTON (Continue/Restart);
+      STATUS = ENABLED+NOFOCUS;
+		  STATUS = ENABLED+IMAGE;
+		  STYLE = MOUSETRACK;
+		  SELECTEDIMAGE = UIButtonMedLit;
+		  HILITEIMAGE = UIButtonMedLit;
+		  BACKGROUNDIMAGE = UIButtonMed;
+		  ENABLEDIMAGE = NULL;
+		  DISABLEDIMAGE = NULL;
+		  IMAGEOFFSET = 0 -1;
+      TEXT = WindowDir:OK;
+    END
+
+    WINDOW
+      10701 190 245 55 20 PUSHBUTTON (Quit);
+      STATUS = ENABLED+NOFOCUS;
+		  STATUS = ENABLED+IMAGE;
+		  STYLE = MOUSETRACK;
+		  SELECTEDIMAGE = UIButtonMedLit;
+		  HILITEIMAGE = UIButtonMedLit;
+		  BACKGROUNDIMAGE = UIButtonMed;
+		  ENABLEDIMAGE = NULL;
+		  DISABLEDIMAGE = NULL;
+		  IMAGEOFFSET = 0 -1;
+      TEXT = GGOver.wnd:Quit;
+    END
+
+    WINDOW
+      10712 120 225 80 0 STATICTEXT (timer);
+      STATUS = ENABLED+NOFOCUS;
+      DATA = 1 0 guirank.c:TimeRemaining;
+    END
+
+  END
+
+END
+

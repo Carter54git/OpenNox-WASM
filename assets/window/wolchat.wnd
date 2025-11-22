@@ -1,0 +1,281 @@
+ENABLEDCOLOR = 0 0 0;
+HILITECOLOR = 0 0 0;
+DISABLEDCOLOR = 128 128 128;
+SELECTEDCOLOR = 128 128 128;
+TEXTCOLOR = 230 165 65;
+BACKGROUNDCOLOR = 0 0 0;
+
+WINDOW
+  1900 0 0 640 480 USER;
+  STATUS = ENABLED+IMAGE+ABOVE+NOFOCUS;
+  BACKGROUNDIMAGE = NoxChatBkg;
+
+  CHILD
+    WINDOW
+      1902 448 375 109 25 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      IMAGEOFFSET = 2 1;
+      SELECTEDIMAGE = NoxWorldChatButton6;
+      HILITEIMAGE = NoxWorldChatButton6;
+      BACKGROUNDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+      TEXT = WolChat.wnd:FindPage;
+      TOOLTIP = WolChat.wnd:FindPageHelp;
+    END
+
+    WINDOW
+      1903 58 361 109 55 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      IMAGEOFFSET = 2 15;
+      SELECTEDIMAGE = NoxWorldChatButton4;
+      HILITEIMAGE = NoxWorldChatButton4;
+      BACKGROUNDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+      TEXT = WolChat.wnd:Refresh;
+      TOOLTIP = WolChat.wnd:RefreshHelp;
+    END
+
+    WINDOW
+      1904 238 361 109 55 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      IMAGEOFFSET = 2 15;
+      SELECTEDIMAGE = NoxWorldChatButton5;
+      HILITEIMAGE = NoxWorldChatButton5;
+      BACKGROUNDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+      TEXT = WolChat.wnd:Options;
+      TOOLTIP = WolChat.wnd:OptionsHelp;
+    END
+
+    WINDOW
+      1905 441 417 182 40 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      IMAGEOFFSET = 0 -10;
+      SELECTEDIMAGE = NoxWorldChatButton1;
+      HILITEIMAGE = NoxWorldChatButton1;
+      BACKGROUNDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+      TEXT = WolChat.wnd:Games;
+      TOOLTIP = WolChat.wnd:GamesHelp;
+    END
+
+    WINDOW
+      1906 250 439 140 40 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      IMAGEOFFSET = 0 5;
+      SELECTEDIMAGE = NoxWorldChatButton8;
+      HILITEIMAGE = NoxWorldChatButton8;
+      BACKGROUNDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+      TEXT = WolChat.wnd:Back;
+      TOOLTIP = WolChat.wnd:BackHelp;
+    END
+
+    WINDOW
+      1907 43 52 320 310 SCROLLLISTBOX (Chat Messages);
+      STATUS = ENABLED+NOFOCUS;
+      SELECTEDCOLOR = TRANSPARENT;
+      DISABLEDCOLOR = 0 0 0;
+      DATA = 128 10 1 1 0 0 0;
+      FONT = default;
+      TOOLTIP = WolChat.wnd:MessagesHelp;
+    END
+
+    WINDOW
+      1908 403 32 195 121 SCROLLLISTBOX (Chat Channels);
+      STATUS = ENABLED+NOFOCUS;
+      DISABLEDCOLOR = 0 0 0;
+      DATA = 256 10 0 1 0 0 0;
+      FONT = default;
+      TOOLTIP = WolChat.wnd:ChannelHelp;
+    END
+
+    WINDOW
+      1909 404 168 195 195 SCROLLLISTBOX (Chat Users);
+      STATUS = ENABLED+NOFOCUS;
+      DISABLEDCOLOR = 0 0 0;
+      DATA = 512 10 0 1 0 1 0;
+      FONT = default;
+      TOOLTIP = WolChat.wnd:UserHelp;
+    END
+
+    WINDOW
+      1910 34 414 350 15 ENTRYFIELD;
+      STYLE = MOUSETRACK;
+      STATUS = ENABLED+ONE_LINE;
+      TEXT = WolChat.wnd:Empty;
+      DATA = 80 335;
+      TOOLTIP = WolChat.wnd:TextEntryHelp;
+    END
+
+    WINDOW
+      1913 40 430 109 30 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      IMAGEOFFSET = 5 2;
+      SELECTEDIMAGE = NoxWorldChatButton7;
+      HILITEIMAGE = NoxWorldChatButton7;
+      TEXT = WolChat.wnd:Action;
+      BACKGROUNDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+      TOOLTIP = WolChat.wnd:EmoteHelp;
+    END
+
+	WINDOW
+      1914 42 453 109 30 PUSHBUTTON;
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      IMAGEOFFSET = 5 2;
+      SELECTEDIMAGE = UIButtonXlgLit;
+      HILITEIMAGE = UIButtonXlgLit;
+      TEXT = Servopts.wnd:Server;
+      BACKGROUNDIMAGE = UIButtonXlg;
+      DISABLEDIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+      TOOLTIP = servlist.wnd:ChooseServer;
+    END
+
+    WINDOW
+      1916 42 35 321 14 STATICTEXT;
+      STATUS = ENABLED+NOFOCUS;
+      ENABLEDCOLOR = 0 0 0;
+      DISABLEDCOLOR = 0 0 0;
+      HILITECOLOR = 0 0 0;
+      TEXTCOLOR = 230 165 65;
+      DATA = 0 0 WolChat.wnd:Empty;
+      FONT = default;
+      TOOLTIP = WolChat.wnd:MessageTextHelp;
+    END
+
+    WINDOW
+      1917 376 47 16 300 VERTSLIDER (slider);
+      STATUS = ENABLED+NOFOCUS;
+      ENABLEDCOLOR = TRANSPARENT;
+      HILITECOLOR = TRANSPARENT;
+      SELECTEDCOLOR = TRANSPARENT;
+      BACKGROUNDCOLOR = TRANSPARENT;
+      DATA = 0 300;
+    END
+
+    WINDOW
+      1918 374 24 20 25 PUSHBUTTON (up button);
+      STATUS = ENABLED+NOFOCUS+IMAGE;
+      BACKGROUNDIMAGE = ShopInventoryUp;
+      SELECTEDIMAGE = ShopInventoryUpSelected;
+      DISABLEDIMAGE = NULL;
+      HILITEIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+    END
+
+    WINDOW
+      1919 374 347 20 25 PUSHBUTTON (down button);
+      STATUS = ENABLED+NOFOCUS+IMAGE;
+      BACKGROUNDIMAGE = ShopInventoryDown;
+      SELECTEDIMAGE = ShopInventoryDownSelected;
+      DISABLEDIMAGE = NULL;
+      HILITEIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+    END
+
+    WINDOW
+      1920 609 47 16 88 VERTSLIDER (slider);
+      STATUS = ENABLED+NOFOCUS;
+      ENABLEDCOLOR = TRANSPARENT;
+      HILITECOLOR = TRANSPARENT;
+      SELECTEDCOLOR = TRANSPARENT;
+      BACKGROUNDCOLOR = TRANSPARENT;
+      DATA = 0 300;
+    END
+
+    WINDOW
+      1921 607 24 20 25 PUSHBUTTON (up button);
+      STATUS = ENABLED+NOFOCUS+IMAGE;
+      BACKGROUNDIMAGE = ShopInventoryUp;
+      SELECTEDIMAGE = ShopInventoryUpSelected;
+      DISABLEDIMAGE = NULL;
+      HILITEIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+    END
+
+    WINDOW
+      1922 607 135 20 25 PUSHBUTTON (down button);
+      STATUS = ENABLED+NOFOCUS+IMAGE;
+      BACKGROUNDIMAGE = ShopInventoryDown;
+      SELECTEDIMAGE = ShopInventoryDownSelected;
+      DISABLEDIMAGE = NULL;
+      HILITEIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+    END
+
+
+    WINDOW
+      1923 609 183 16 164 VERTSLIDER (slider);
+      STATUS = ENABLED+NOFOCUS;
+      ENABLEDCOLOR = TRANSPARENT;
+      HILITECOLOR = TRANSPARENT;
+      SELECTEDCOLOR = TRANSPARENT;
+      BACKGROUNDCOLOR = TRANSPARENT;
+      DATA = 0 300;
+    END
+
+    WINDOW
+      1924 607 160 20 25 PUSHBUTTON (up button);
+      STATUS = ENABLED+NOFOCUS+IMAGE;
+      BACKGROUNDIMAGE = ShopInventoryUp;
+      SELECTEDIMAGE = ShopInventoryUpSelected;
+      DISABLEDIMAGE = NULL;
+      HILITEIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+    END
+
+    WINDOW
+      1925 607 347 20 25 PUSHBUTTON (down button);
+      STATUS = ENABLED+NOFOCUS+IMAGE;
+      BACKGROUNDIMAGE = ShopInventoryDown;
+      SELECTEDIMAGE = ShopInventoryDownSelected;
+      DISABLEDIMAGE = NULL;
+      HILITEIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+    END
+
+    WINDOW
+      1926 151 433 82 26 PUSHBUTTON (Clans);
+      STATUS = ENABLED+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      SELECTEDIMAGE = NoxWorldChatClansLit;
+      HILITEIMAGE = NoxWorldChatClansLit;
+      BACKGROUNDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+      TEXT = WolChat.wnd:Clans;
+      TOOLTIP = WolChat.wnd:ClansHelp;
+	  IMAGEOFFSET = 1 2;
+    END
+
+	WINDOW
+      1927 151 453 82 26 PUSHBUTTON (Ladder);
+      STATUS = ENABLED+ABOVE+IMAGE+NOFOCUS;
+      STYLE = MOUSETRACK;
+      SELECTEDIMAGE = NoxWorldChatLadderLit;
+      HILITEIMAGE = NoxWorldChatLadderLit;
+      BACKGROUNDIMAGE = NULL;
+      DISABLEDIMAGE = NULL;
+      ENABLEDIMAGE = NULL;
+      TEXT = Noxworld.c:Ladder;
+      TOOLTIP = WolChat.wnd:LadderHelp;
+	  IMAGEOFFSET = 1 2;
+    END
+  END
+END
+
