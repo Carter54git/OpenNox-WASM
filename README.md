@@ -48,4 +48,6 @@ If you discover new bugs or have suggestions for improvements, please create an 
 
 *Relive the world of Nox, now in your browser!*
 
+My Telegram channel about development: https://t.me/gamebase54
+
 </div>
