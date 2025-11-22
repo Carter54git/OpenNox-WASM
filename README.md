@@ -10,6 +10,8 @@
 
 This project features a restored and adapted version of the legendary game Nox, running directly in your web browser. All game features are preserved and working correctly.
 
+For start you need files from oringal game from maps folder!
+
 ## 🇷🇺 Russian Localization
 
 To add Russian language support to the game:
